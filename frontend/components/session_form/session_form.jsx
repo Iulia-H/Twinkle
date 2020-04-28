@@ -7,7 +7,7 @@ class SessionForm extends React.Component{
         this.state = {
             username: "",
             password: ""
-        },
+        };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.resetPassword = this.resetPassword.bind(this);
     }
@@ -22,10 +22,17 @@ class SessionForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.action(this.state);
+        const user = this.state;
+        console.log(user);
+
+        this.props.action(user);
         this.resetPassword();
     }
     
+    componentWillUnmount(){
+        this.props.deleteErrors();
+    }
+
     renderErrors(){
         const { errors } = this.props.errors;
         //console.log(errors);
@@ -48,7 +55,7 @@ class SessionForm extends React.Component{
            <div>
                 <h3>{this.props.formType}</h3>
                 {this.renderErrors()}
-                <form onSubmit={this.handleSubmit} className="session-form">
+                <form onSubmit={this.handleSubmit} >
                     <label>
                         Username
                         <input type="text"

@@ -17,6 +17,7 @@ class Api::UsersController < ApplicationController
         render "static_pages/root"
         #find a better way of getting to the main page
     end
+    
     private
     
     def user_params

@@ -8,16 +8,15 @@ class NavBar extends React.Component{
     }
 
     render(){
-       
+      
        return(
           <div className="nav-bar">
-            <h1>Twinkle</h1>
+            <h1 className="title">Twinkle</h1>
               <div>
               {this.props.currentUser ? 
               (<div>
               <p> Welcome {this.props.currentUser.username}</p>
               <button onClick={this.props.logout}>Log Out!</button>
-              {/* <button onClick={this.props.deleteAccount}>Delete Account</button> */}
                 </div>
               ):
               (<ul>
@@ -33,3 +32,5 @@ class NavBar extends React.Component{
 };
 
 export default NavBar;
+
+{/* <button onClick={this.props.deleteAccount}>Delete Account</button> */ }

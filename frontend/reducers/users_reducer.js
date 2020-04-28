@@ -8,6 +8,7 @@ const usersReducer = (state = {}, action) => {
         case DELETE_USER:
             const newState = Object.assign({}, state);
             delete newState[action.user.id];
+            return newState;
         default:
             return state;
     }

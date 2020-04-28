@@ -4,6 +4,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const DELETE_USER = "DELETE_USER";
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const DELETE_ERRORS = "DELETE_ERRORS";
 
 const receiveCurrentUser = user => ({
     type: RECEIVE_CURRENT_USER,
@@ -17,6 +18,11 @@ const logoutCurrentUser = () => ({
 const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
+});
+
+export const deleteErrors = () =>({
+    type: DELETE_ERRORS,
+    
 });
 
 const deleteUser = (user) => ({
@@ -46,3 +52,5 @@ export const deleteAccount = (user) => dispatch => (
     APIUtil.deleteAccount(user)
         .then(() => dispatch(deleteUser(user)))
 );
+
+

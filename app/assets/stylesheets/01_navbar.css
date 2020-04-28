@@ -1,0 +1,13 @@
+.nav-bar{
+    background-color: black;
+    display: flex;
+    
+}
+
+.title{
+    font-family: sans-serif;
+    font-size: xx-large;
+    color: white;
+    padding: 20px;
+
+}
