@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 class SessionForm extends React.Component{
     constructor(props){
         super(props);
-        this.state = this.props.user;
+        this.state = {
+            username: "",
+            password: ""
+        },
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -18,13 +21,18 @@ class SessionForm extends React.Component{
     }
     
     renderErrors(){
-        return(
-           <ul>
-               {this.props.errors.map(error, i =>{
-                   return <li key={i}>{error}</li>
-               })}
-           </ul>
-        )
+        const { errors } = this.props.errors;
+        //console.log(errors);
+        if (errors) {
+            return(
+               <ul className="error-list">
+                   {errors.map((error, i) =>{
+                       return <li key={i}>{error}</li>
+                   })}
+               </ul>
+            )
+
+        }
     }
 
     render() {
@@ -33,6 +41,7 @@ class SessionForm extends React.Component{
         return (
            <div>
                 <h3>{this.props.formType}</h3>
+                {this.renderErrors()}
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Username
@@ -52,6 +61,8 @@ class SessionForm extends React.Component{
            </div>
         )
     }
+
+
 }
 
 export default SessionForm;
