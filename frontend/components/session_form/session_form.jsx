@@ -9,15 +9,21 @@ class SessionForm extends React.Component{
             password: ""
         },
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.resetPassword = this.resetPassword.bind(this);
     }
 
     update(field){
         return (e) => this.setState({[field]: e.target.value});
     }
 
+    resetPassword(){
+        this.setState({password: ""});
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.action(this.state);
+        this.resetPassword();
     }
     
     renderErrors(){
@@ -42,7 +48,7 @@ class SessionForm extends React.Component{
            <div>
                 <h3>{this.props.formType}</h3>
                 {this.renderErrors()}
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="session-form">
                     <label>
                         Username
                         <input type="text"
@@ -52,7 +58,7 @@ class SessionForm extends React.Component{
                     <label>
                         Password
                         <input type="password"
-                            value={this.state.passowrd}
+                            value={this.state.password}
                             onChange={this.update("password")} />
                     </label>
                     <button type= "submit" value={this.props.formType}>{this.props.formType}</button>
