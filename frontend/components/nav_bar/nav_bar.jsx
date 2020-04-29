@@ -12,14 +12,14 @@ class NavBar extends React.Component{
        return(
           <div className="nav-bar">
             <h1 className="title">Twinkle</h1>
-              <div>
+              <div >
               {this.props.currentUser ? 
               (<div>
-              <p> Welcome {this.props.currentUser.username}</p>
+              <p className="welcome-message"> Welcome {this.props.currentUser.username}!</p>
               <button onClick={this.props.logout}>Log Out!</button>
                 </div>
               ):
-              (<ul>
+               (<ul className="buttons">
                  <button><Link to="/login">Login</Link></button>
                  <button><Link to="/signup">Sign up!</Link></button>
                 </ul>

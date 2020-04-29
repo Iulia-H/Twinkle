@@ -9,7 +9,7 @@ class SessionForm extends React.Component{
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.resetPassword = this.resetPassword.bind(this);
+        //this.resetPassword = this.resetPassword.bind(this);
     }
 
     update(field){
@@ -22,11 +22,15 @@ class SessionForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        const user = this.state;
-        //console.log(user);
+        //const { action } = this.props;
+        const user = Object.assign(this.state);
+        console.log(user);
 
+        // console.log(action.type);
+        // console.log(this.props);
         this.props.action(user);
-        this.resetPassword();
+    
+        //this.resetPassword();
     }
     
     componentWillUnmount(){

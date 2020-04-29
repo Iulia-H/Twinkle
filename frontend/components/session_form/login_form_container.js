@@ -9,10 +9,12 @@ const mSTP = state => ({
     formType: "Log In!"
 });
 
-const mDTP = dispatch => ({
-    action: (user) => dispatch(login(user)),
+const mDTP = dispatch =>({
+    action: (user) =>dispatch(login(user)),
+
     deleteErrors: () => dispatch(deleteErrors())
-    
 });
+
+
 
 export default connect(mSTP, mDTP)(SessionForm);

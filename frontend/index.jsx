@@ -8,9 +8,10 @@ import { deleteAccount } from "./util/session_api_util";
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const root = document.getElementById("root");
     let store;
+    //debugger;
     if (window.currentUser) {
+        
         const preloadedState = {
             entities: {
                 users: { [window.currentUser.id]: window.currentUser }
@@ -22,9 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
+    const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root)
     //testing
     window.deleteAccount = deleteAccount;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
 });
+
