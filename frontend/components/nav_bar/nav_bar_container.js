@@ -9,7 +9,7 @@ const mSTP = ({entities, session}) =>({
 
 const mDTP = dispatch => ({
     logout: ()=> dispatch(logout()),
-    //deleteAccount: user=> dispatch(deleteAccount(user))
+    deleteAccount: user=> dispatch(deleteAccount(user))
 });
 
 export default connect(mSTP, mDTP)(NavBar);

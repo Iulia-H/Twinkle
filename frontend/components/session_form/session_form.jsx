@@ -9,7 +9,7 @@ class SessionForm extends React.Component{
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        //this.resetPassword = this.resetPassword.bind(this);
+        this.resetPassword = this.resetPassword.bind(this);
     }
 
     update(field){
@@ -22,15 +22,9 @@ class SessionForm extends React.Component{
 
     handleSubmit(e) {
         e.preventDefault();
-        //const { action } = this.props;
         const user = Object.assign(this.state);
-        console.log(user);
-
-        // console.log(action.type);
-        // console.log(this.props);
         this.props.action(user);
-    
-        //this.resetPassword();
+        this.resetPassword();
     }
     
     componentWillUnmount(){
@@ -39,7 +33,6 @@ class SessionForm extends React.Component{
 
     renderErrors(){
         const { errors } = this.props.errors;
-        //console.log(errors);
         if (errors) {
             return(
                <ul className="error-list">
@@ -53,13 +46,13 @@ class SessionForm extends React.Component{
     }
 
     render() {
-        const signup = <Link to="/signup"></Link>
-        const login = <Link to="/login"></Link>
+        const signup = <Link to="/signup">Sign up</Link>
+        const login = <Link to="/login">Log in</Link>
         return (
-           <div>
+           <div className="session-container">
                 <h3>{this.props.formType}</h3>
                 {this.renderErrors()}
-                <form onSubmit={this.handleSubmit} >
+                <form onSubmit={this.handleSubmit} className= "form">
                     <label>
                         Username
                         <input type="text"
@@ -74,7 +67,9 @@ class SessionForm extends React.Component{
                     </label>
                     <button type= "submit" value={this.props.formType}>{this.props.formType}</button>
                 </form>
-                {this.props.formType === "Sign Up!"? login : signup}
+                <div className="other-link">Alternatively please 
+                    {this.props.formType === "Sign Up!" ? login : signup}
+                </div>
            </div>
         )
     }
