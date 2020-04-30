@@ -1,0 +1,13 @@
+.background{
+    display: block;
+    size: 100%;
+    
+}
+.home-page{
+    display: flex;
+    align-content: center;
+}
+
+.home-text{
+    
+}

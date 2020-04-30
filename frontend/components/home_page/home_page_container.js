@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { HomePage } from "./home_page";
+import HomePage  from "./home_page";
 
 const mSTP = (state) => ({
     state: state
