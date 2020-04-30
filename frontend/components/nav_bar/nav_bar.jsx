@@ -21,10 +21,10 @@ class NavBar extends React.Component{
     buttons(){
       
       return(
-        <ul className="buttons"  >
-          <button ><NavLink to="/login" className="button">Login</NavLink></button>
-          <button ><NavLink to="/signup" className="button">Sign up!</NavLink></button>
-        </ul>
+        <div className="buttons" >
+          <NavLink to="/login" className="login">Login</NavLink>
+          <NavLink to="/signup" className="signup">Sign up!</NavLink>
+        </div>
       )
     }
     redirect(e){
@@ -46,7 +46,7 @@ class NavBar extends React.Component{
               (this.welcomeMessage()
               ):
                buttons
-              };
+              }
             </div>
           </div>
        )

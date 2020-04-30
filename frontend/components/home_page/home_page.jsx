@@ -12,8 +12,12 @@ class HomePage extends React.Component{
                 <img src={window.background} className="background"/>
                 <div className="home-text">
                     <h1 className="introduction">Spark your inspiration</h1>
-                    <h3>Join the Twinkle community and start lighting up your feed.</h3>
-                    <button><Link to="/signup">Start for free</Link></button>
+                    <br/>
+                    <h3>Join the Twinkle community and start 
+                        <br/>
+                        lighting up your feed with millions of photos</h3>
+                    <br/>
+                    <Link to="/signup" className="redirect">Start for free</Link>    
                 </div>
             </div>
         )

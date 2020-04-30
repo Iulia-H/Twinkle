@@ -35,6 +35,7 @@ class SessionForm extends React.Component{
         const { errors } = this.props.errors;
         if (errors) {
             return(
+                
                 <ul className="error-messages">
                    {errors.map((error, i) =>{
                        return <li key={i}>{error}</li>
@@ -77,6 +78,7 @@ class SessionForm extends React.Component{
                         <button type= "submit" value={this.props.formType}>
                             {this.props.formType}
                         </button>
+                        <button type="submit" >Demo User</button>
                     </form>
                     <div className="other-link">Alternatively please 
                     <br/>

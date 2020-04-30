@@ -1,0 +1,44 @@
+.background{
+  
+    min-height: 100%;
+    min-width: 100%;
+
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1
+    
+}
+.home-page{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.home-text{
+    position: absolute;
+    top: 37%;
+    color: white;
+}
+
+.introduction{
+    font-size: 57px;
+    /* font-weight: bold; */
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 27px;
+    line-height: 150%;
+}
+
+.redirect {
+    margin-top: 50px;
+    padding: 10px;
+    font-size: large;
+    color: black;
+    background-color: white;
+}
