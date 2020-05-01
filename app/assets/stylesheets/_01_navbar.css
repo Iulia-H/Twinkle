@@ -1,10 +1,11 @@
 .nav-bar{
     position: fixed;
-    background-color: black;
-    opacity: 0.5;
+    /* background-color: black; */
+    background-color: rgba(0,0,0,0.5);
+    /* opacity: 0.5; */
     box-sizing: border-box;
-    min-height: 13%;
-    max-height: 13%;
+    min-height: 9%;
+    max-height: 9%;
     min-width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,8 +19,8 @@
     color: white;
     opacity: 1;
     padding-left: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-decoration: none
 }
 
@@ -32,7 +33,7 @@
     font-family: sans-serif;
     font-size: medium;
     color: white;
-    padding: 20px;
+    padding:0 20px;
 }
 
 .buttons{  

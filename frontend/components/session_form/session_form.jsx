@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.resetPassword = this.resetPassword.bind(this);
+        this.logInDemo = this.logInDemo.bind(this);
     }
 
     update(field){
@@ -46,39 +47,51 @@ class SessionForm extends React.Component{
         }
     }
 
+    logInDemo(e){
+        e.preventDefault();
+        const demoUser = {username: "demoUser", password: "password"};
+        this.setState(demoUser)
+       
+
+    }
+
     render() {
         const signup = <Link to="/signup">Sign up</Link>
         const login = <Link to="/login">Log in</Link>
         return (
             <div className="session-page">
                 <figure >
-                    <img src={window.background} className="session-img" />
-                    <figcaption>Hello</figcaption>
+                    <img src={window.img3} className="session-img" />
+                    <figcaption>{window.caption2}</figcaption>
                 </figure>
                 <div className="session-container">
                     <h3 >{this.props.formType}</h3>
                     {this.renderErrors()}
                     <form onSubmit={this.handleSubmit} className= "form">
-                        <label>
-                            Username
-                            <br/>
+                        <div className="box">
+                            <label>
+                                Username
+                            </label>
                             <input type="text"
                             value={this.state.username}
                             onChange={this.update("username")}/>
-                        </label>
-                        <br></br>
-                        <label>
-                            Password
-                            <br/>
+                        </div>
+                        <br/>
+                        <div className="box">
+                            <label>
+                                Password
+                            </label>
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update("password")} />
-                        </label>
+                        </div>
                         <br/>
                         <button type= "submit" value={this.props.formType}>
                             {this.props.formType}
+                    
                         </button>
-                        <button type="submit" >Demo User</button>
+                        <br/>
+                        <button type="submit" onClick={this.logInDemo}>Demo User</button>
                     </form>
                     <div className="other-link">Alternatively please 
                     <br/>

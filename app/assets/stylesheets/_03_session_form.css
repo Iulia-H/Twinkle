@@ -16,12 +16,19 @@
     z-index: -1
 }
 
+figcaption{
+    position: absolute;
+    bottom: 5%;
+    color: white;
+}
+
 .session-container{
     text-align: center;
     width: 20%;
     min-width: 172px;
     position: absolute;
-    top: 37%;
+    top: 15%;
+    bottom: 20%;
     padding: 5px;
     border-width: 5px;
     border-style: solid;
@@ -31,16 +38,13 @@
     
 }
 
-figcaption{
-    position: absolute;
-    bottom: 5%;
-    color: white;
-}
+
 
 .error-messages{
     box-sizing: border-box;
     margin: 10px;
     padding: 5px;
+    background-color: pink;
     
 }
 
@@ -52,17 +56,25 @@ h3{
 .form{
     /* position: absolute; */
     box-sizing: border-box;
-    text-align: center;
-   
-    align-content: center;
+    margin:0 20px;
+    padding: 15px;
+    /* align-content: center; */
     
 }
-.form > label{
-    box-sizing: border-box;
-    border: 20px;
-    padding-top: 25px;
-    margin-top:20px;
 
+.form > .box{
+    text-align: left;
+    border: grey solid 1px;
+    padding: 10px 0;
+    margin-bottom: 40px
+}
+.form  input{
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    width: 100%;
+  
 }
 
 .other-link{

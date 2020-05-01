@@ -1,6 +1,41 @@
+/* 
+.image-container{
+    position: absolute;
+    animation: figure 16s ease-in-out infinite;
+}
+@keyframes figure{
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 0.5}
+    17% { opacity: 1 }
+    25% { opacity: 1 }
+    50% { opacity: 1; animation-timing-function: ease-out; }
+    100% { opacity: 0 }
+} */
+
 .background{
-  
     min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+figcaption{
+    position: absolute;
+    bottom: 5%;
+    color: white;
+}
+
+.home-page{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+     min-height: 100%;
     min-width: 100%;
 
     width: 100%;
@@ -11,16 +46,10 @@
     z-index: -1
     
 }
-.home-page{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    
-}
 
 .home-text{
     position: absolute;
-    top: 37%;
+    top: 26%;
     color: white;
 }
 

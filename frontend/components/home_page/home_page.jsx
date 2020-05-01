@@ -6,10 +6,36 @@ class HomePage extends React.Component{
         super(props);
        
     }
+
+    imageChange(){
+
+        return(
+            <div className="image-container">
+                <figure >
+                    <img src={window.img2} className="background" />
+                    <figcaption>{window.caption2}</figcaption>
+                </figure>
+                <figure >
+                    <img src={window.img2} className="background" />
+                    <figcaption>{window.caption2}</figcaption>
+                </figure>
+                <figure >
+                    <img src={window.img1} className="background" />
+                    <figcaption>{window.caption1}</figcaption>
+                </figure>
+            </div>
+        )
+    }
+
+
     render(){
         return(
             <div className="home-page">
-                <img src={window.background} className="background"/>
+                    <figure >
+                        <img src={window.img2} className="background"/>
+                        <figcaption>{window.caption2}</figcaption>
+                    </figure>
+                {/* {this.imageChange()} */}
                 <div className="home-text">
                     <h1 className="introduction">Spark your inspiration</h1>
                     <br/>
