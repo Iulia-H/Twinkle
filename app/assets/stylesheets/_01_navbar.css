@@ -25,15 +25,17 @@
 }
 
 .message-container{
-    display: flexbox;
-
+    box-sizing: border-box;
+    padding:0 30px;
+    text-align: center;
 }
 
 .welcome-message{
     font-family: sans-serif;
     font-size: medium;
     color: white;
-    padding:0 20px;
+    padding:5px 0
+  
 }
 
 .buttons{  
@@ -71,5 +73,11 @@
     background-color: white;
     opacity: 1;
 
+}
+
+.logout{
+    left: 50%;
+    /* transform: translateX(-50%); */
+   
 }
 

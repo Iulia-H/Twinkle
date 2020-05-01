@@ -12,7 +12,7 @@ class NavBar extends React.Component{
       return(
         <div className="message-container">
           <p className="welcome-message"> Welcome {this.props.currentUser.username}!</p>
-          <button onClick={this.props.logout}>Log Out!</button>
+          <button onClick={this.props.logout} className="logout">Log Out!</button>
           {/* <button onClick={this.props.deleteAccount}>Delete Account</button> */}
         </div>
       )
