@@ -62,7 +62,7 @@ class SessionForm extends React.Component{
             <div className="session-page">
                 <figure >
                     <img src={window.img3} className="session-img" />
-                    <figcaption>{window.caption2}</figcaption>
+                    <figcaption>{window.caption3}</figcaption>
                 </figure>
                 <div className="session-container">
                     <h3 >{this.props.formType}</h3>

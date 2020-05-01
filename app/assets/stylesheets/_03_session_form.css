@@ -20,6 +20,8 @@ figcaption{
     position: absolute;
     bottom: 5%;
     color: white;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .session-container{
