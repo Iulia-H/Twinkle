@@ -24,10 +24,11 @@ figcaption{
 
 .session-container{
     text-align: center;
-    width: 20%;
+    width: 25%;
     min-width: 172px;
     position: absolute;
-    top: 15%;
+    min-height: 70%;
+    top: 10%;
     bottom: 20%;
     padding: 5px;
     border-width: 5px;
@@ -38,15 +39,31 @@ figcaption{
     
 }
 
+.errors-container{
+    position: relative;
+    min-height: 10%;
+    min-width: 80%;
+    background-color: white;
+    display: flex;
+    text-align: center;
 
+}
 
 .error-messages{
     box-sizing: border-box;
-    margin: 10px;
-    padding: 5px;
+    position: absolute;
     background-color: pink;
-    
+    min-width: 100%;
+    line-height: 120%;
+    margin: 15px, 5px;
+    /* animation: fadeOut 4s forwards; */
 }
+
+/* 
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+} */
 
 h3{
     margin-bottom: 10px;
@@ -56,25 +73,39 @@ h3{
 .form{
     /* position: absolute; */
     box-sizing: border-box;
-    margin:0 20px;
+    margin:0 15px;
     padding: 15px;
+
     /* align-content: center; */
     
 }
 
-.form > .box{
+.box{
     text-align: left;
     border: grey solid 1px;
-    padding: 10px 0;
-    margin-bottom: 40px
+    padding: 10px ;
+    margin-bottom: 25px;
 }
-.form  input{
+
+.box label{
+   
+}
+
+.box input{
     box-sizing: border-box;
     box-shadow: none;
     outline: none;
     border: none;
     width: 100%;
+    height: 100%;
   
+}
+
+.form button{
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .other-link{
