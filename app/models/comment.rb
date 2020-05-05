@@ -4,7 +4,7 @@ class Comment < ApplicationRecord
         foreign_key: :photo_id,
         class_name: :Photo
 
-    belongs to :user,
+    belongs_to :user,
         foreign_key: :user_id,
         class_name: :User
 end
