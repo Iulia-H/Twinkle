@@ -5,20 +5,23 @@ import { Route, Redirect, Switch, Link, HashRouter} from 'react-router-dom';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute} from '../util/route_util';
+import PhotoContainer from "./photo/photo_container";
 
 
 const App = () => (
     <div>
         <header className="links">
-        <NavBarContainer />
+        {/* <NavBarContainer /> */}
         {/* <Route exact path="/" component={NavBarContainer}/> */}
         </header>
         <div>
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
-            <Route path="/" component={HomePageContainer} />
+            <Route exact path="/photos/:id" component={PhotoContainer}/>
+            <Route exact path="/" component={HomePageContainer} />
         </Switch>
+        <input type="file"/>
         </div>
     </div>
 );

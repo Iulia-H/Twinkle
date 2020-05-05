@@ -5,6 +5,7 @@ import Root from "./components/root";
 
 //testing
 import { deleteAccount } from "./util/session_api_util";
+import { getPhoto} from "./util/photo_api_util";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById("root");
     ReactDOM.render(<Root store={store} />, root)
     //testing
+    window.getPhoto = getPhoto;
     window.deleteAccount = deleteAccount;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
