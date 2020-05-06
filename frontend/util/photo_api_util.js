@@ -6,13 +6,16 @@ export const getPhoto = photoId =>(
     })
 );
 
-export const createPhoto = photo =>(
-    $.ajax({
+export const createPhoto = photo => {
+ 
+    return $.ajax({
         url: "/api/photos",
         method: "Post",
-        data: {photo}
+        data: photo,
+        contentType: false,
+        processData: false
     })
-);
+};
 
 export const getPhotos = ()=>(
     $.ajax({

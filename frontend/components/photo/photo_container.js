@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import {getPhotos, getPhoto, createPhoto} from "../../actions/photos_actions";
+import {getPhoto} from "../../actions/photos_actions";
 import Photo from "./photo";
 
 const mSTP = ({entities})=> ({

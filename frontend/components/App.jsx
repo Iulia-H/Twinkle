@@ -6,6 +6,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute} from '../util/route_util';
 import PhotoContainer from "./photo/photo_container";
+import PhotoFormContainer from "./photo/photo_form";
 
 
 const App = () => (
@@ -20,8 +21,9 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <Route exact path="/photos/:id" component={PhotoContainer}/>
             <Route exact path="/" component={HomePageContainer} />
+            <Route exact path="/photo/new" component={PhotoFormContainer}/>
         </Switch>
-        <input type="file"/>
+       
         </div>
     </div>
 );
