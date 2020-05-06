@@ -1,3 +1,14 @@
 class Tag < ApplicationRecord
-    has_and_belongs_to_many :photos
+
+    has_many :photo_tags,
+        foreign_key: :tag_id,
+        class_name: :PhotoTag
+
+    has_many :photos,
+        through: :photo_tags
+
+    belongs_to :photo,
+        foreign_key: :photo_id,
+        class_name: :Photo
+        
 end
