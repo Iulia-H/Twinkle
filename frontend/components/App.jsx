@@ -8,12 +8,13 @@ import { AuthRoute} from '../util/route_util';
 import PhotoContainer from "./photo/photo_container";
 import PhotoFormContainer from "./photo/photo_form";
 import TagFormContainer from "./tag/tag_form_container";
+import PhotosContainer from "./photo/photos";
 
 
 const App = () => (
     <div>
         <header className="links">
-        {/* <NavBarContainer /> */}
+        <NavBarContainer />
         {/* <Route exact path="/" component={NavBarContainer}/> */}
         </header>
         <div>
@@ -21,10 +22,11 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <Route exact path="/photos/:id" component={PhotoContainer}/>
-            <Route exact path="/" component={HomePageContainer} />
             <Route exact path="/photo/new" component={PhotoFormContainer}/>
             <Route exact path="/tag/new" component={TagFormContainer}/>
+            <Route exact path="/photos/" component={PhotosContainer}/>
             
+            <Route path="/" component={HomePageContainer} />
         </Switch>
        
         </div>
