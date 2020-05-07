@@ -17,16 +17,16 @@ const App = () => (
         <NavBarContainer />
         {/* <Route exact path="/" component={NavBarContainer}/> */}
         </header>
-        <div>
+        <div >
         <Switch>
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <Route exact path="/photos" component={PhotosContainer}/>
             <Route exact path="/photos/:id" component={PhotoContainer}/>
             <Route exact path="/photo/new" component={PhotoFormContainer}/>
             <Route exact path="/tag/new" component={TagFormContainer}/>
-            <Route exact path="/photos/" component={PhotosContainer}/>
             
-            <Route path="/" component={HomePageContainer} />
+            <Route exact path="/" component={HomePageContainer} />
         </Switch>
        
         </div>

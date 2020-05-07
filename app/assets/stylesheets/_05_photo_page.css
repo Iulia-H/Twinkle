@@ -1,0 +1,9 @@
+.photo-container{
+    position: absolute;
+    height: 91%;
+    min-height: 91%;
+    width: 100%;
+    background-color: white;
+    top: 9%;
+    bottom: 20%;
+}

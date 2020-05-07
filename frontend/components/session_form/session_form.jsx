@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { browserHistory } from 'react-router'
 
 class SessionForm extends React.Component{
     constructor(props){
@@ -26,10 +27,15 @@ class SessionForm extends React.Component{
         const user = Object.assign(this.state);
         this.props.action(user);
         this.resetPassword();
+        
     }
     
     componentWillUnmount(){
-        this.props.deleteErrors();
+        if (this.props.errors){
+            this.props.deleteErrors();
+        }else{
+            this.props.history.push("/photos");
+        }
     }
 
     renderErrors(){

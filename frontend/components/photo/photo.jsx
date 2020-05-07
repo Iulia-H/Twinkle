@@ -13,9 +13,9 @@ class Photo extends React.Component{
 
     render() {
         return ( 
-            <div className="photo" >
-                <h1> {this.props.photo.title}</h1>
+            <div className="photo-container" >
                 <img src={this.props.photo.photoUrl}/>
+                <h1> {this.props.photo.title}</h1>
                 <TagFormContainer/>
                 <TagsContainer />
                 <CommentFormContainer/>

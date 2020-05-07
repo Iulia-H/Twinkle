@@ -37,6 +37,10 @@ class PhotoForm extends React.Component{
     
         console.log(formData);
         this.props.createPhoto(formData);
+        this.setState({
+            title: "",
+            link: null
+        });
     }
 
     handlefFile(e){
@@ -46,17 +50,19 @@ class PhotoForm extends React.Component{
     }
 
     render(){
-        console.log(this.state)
+        console.log(this.state);
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label >
-                        Title
-                        <input type="text" value={this.state.title} onChange={this.handleChange("title")}/>
-                    </label>
-                    <label >
-                        <input type="file" onChange={this.handlefFile}/> 
-                    </label>
+            <div className="upload-box">
+                <h1>Upload Photo</h1>
+                <form onSubmit={this.handleSubmit} className="upload-form">
+                    <input 
+                        type="text" 
+                        value={this.state.title} 
+                        onChange={this.handleChange("title")} 
+                        placeholder="Photo title"/>
+                    <br/>
+                    <input type="file" onChange={this.handlefFile}/> 
+                    <br/>
                     <button type="submit">Upload Photo</button>
                 </form>
             </div>
