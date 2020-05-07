@@ -1,4 +1,8 @@
 import React from "react";
+import TagFormContainer from "../tag/tag_form_container";
+import TagsContainer from "../tag/tags_container";
+import CommentsContainer from "../comment/comments_container";
+import CommentFormContainer from "../comment/comment_form_container";
 
 class Photo extends React.Component{
     constructor(props){
@@ -10,8 +14,12 @@ class Photo extends React.Component{
     render() {
         return ( 
             <div className="photo" >
-                <img src={this.props.photo.photoUrl}/>
                 <h1> {this.props.photo.title}</h1>
+                <img src={this.props.photo.photoUrl}/>
+                <TagFormContainer/>
+                <TagsContainer />
+                <CommentFormContainer/>
+                <CommentsContainer/>
             </div>
         )
     }

@@ -36,7 +36,8 @@ class Api::TagsController < ApplicationController
 
     def destroy
         @tag = Tag.find(params[:id])
-        if @tag.destroy
+        if @tag && @tag.photo.user_id == current_user.id
+             @tag.destroy
             render :index
         else
             render json: @tag.errors.full_messages, status: 401

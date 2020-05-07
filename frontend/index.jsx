@@ -6,7 +6,7 @@ import Root from "./components/root";
 //testing
 import { deleteAccount } from "./util/session_api_util";
 import { getPhoto} from "./util/photo_api_util";
-
+import { getTags } from "./actions/tags_actions";
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -31,5 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.deleteAccount = deleteAccount;
     window.getState = store.getState;
     window.dispatch = store.dispatch;
+    window.getTags = getTags;
 });
 

@@ -4,9 +4,9 @@ const photosReducer = (state = {}, action) =>{
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_PHOTO:
-            return Object.assign({}, state, action.photo)
+            return Object.assign({}, state, action.photo);
         case RECEIVE_PHOTOS:
-            return Object.assign({}, state, action.photos);
+            return Object.assign({}, state, { photos: action.photos });
         default:
             return state;
     }

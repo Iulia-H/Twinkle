@@ -7,6 +7,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute} from '../util/route_util';
 import PhotoContainer from "./photo/photo_container";
 import PhotoFormContainer from "./photo/photo_form";
+import TagFormContainer from "./tag/tag_form_container";
 
 
 const App = () => (
@@ -22,6 +23,8 @@ const App = () => (
             <Route exact path="/photos/:id" component={PhotoContainer}/>
             <Route exact path="/" component={HomePageContainer} />
             <Route exact path="/photo/new" component={PhotoFormContainer}/>
+            <Route exact path="/tag/new" component={TagFormContainer}/>
+            
         </Switch>
        
         </div>
