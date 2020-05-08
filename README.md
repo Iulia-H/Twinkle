@@ -1,24 +1,27 @@
-# README
+# Twinkle 
+[Visit Page](https://tw1nkle.herokuapp.com/#/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* ## Overview
 
-Things you may want to cover:
+Twinkle is a single-page website where users can share pictures and images.
 
-* Ruby version
+* ## Technologies used
+Twinkle is a rails app, that uses Postgress for it's database managing and AWS S3 for hosting files. The app is hosted on heroku.
 
-* System dependencies
+* ## Main features
 
-* Configuration
+  - ### User authentication
+    In order to upload a photo an individul needs to make an account and be signed in. The photo will be tied to the user's account can only be modiffied by the user. 
+  
+     User authentication is done by comparing the user's username and their password hash to what exists in the database. Once a user is signed in they no longer see the `login`/`signup` buttons as they are replaced by the `logout` button. 
 
-* Database creation
+     One of the biggest challenges when it came to user auth was getting the current user to be available after refreshing the page as well as changing the buttons when the user was already signed in. This was solved by strapping the user to the window and having conditionals that rendered certain buttons depending on the existance of a user. 
 
-* Database initialization
+     Another challenge was erasing the errors once the correct information was passed in the `login`/`signup` form and redirecting to the appropriate route. Creating a `deleteErrors` action and calling it when a component rerenders got rid of the error messages. The rederecting problem was solved by routing to the `/photos` page when a user is signed in. 
+    
+  
+  - ### Photo Uploading
+  Photo uploading can only be done by a user when they are signed in. The 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* ## Futher directions
