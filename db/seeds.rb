@@ -25,8 +25,8 @@ user9= User.create(username: "Pics_of_people", password: "password8")
 user10= User.create(username: "HelloWorld", password: "password9")
 
 
-# photo1 = Photo.create(title: "Photo by Simon Wilkes on Unsplash", user_id: user1.id)
-# photo1.link.attach(io: open(https://twinkle-dev.s3-us-west-1.amazonaws.com/AKRcVuAyGfYLSFqH3SM3h6fN) ), filename: 'simon-wilkes-py3Uw1QbK6A-unsplash.jpg')
+photo1 = Photo.create(title: "Photo by Simon Wilkes on Unsplash", user_id: user1.id)
+photo1.link.attach(io: open(https://twinkle-dev.s3-us-west-1.amazonaws.com/AKRcVuAyGfYLSFqH3SM3h6fN) ), filename: 'simon-wilkes-py3Uw1QbK6A-unsplash.jpg')
 
 photo2 = Photo.create(title: "Photo by Tunafish Mayonnaise on Unsplash", user_id: user1.id)
 photo2.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/HwCFLRSEezBwjSqFyTtnMshJ"), filename: 'tunafish-mayonnaise-pSIt7op-mds-unsplash.jpg')
@@ -70,17 +70,17 @@ photo15.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/sUq
 photo16 = Photo.create(title: "Photo by Gian D. on Unsplash", user_id: user8.id)
 photo16.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/xztPYdgXbdpsWPfQ9QbiB1vF"), filename: 'gian-d-jZxairpkhho-unsplash.jpg')
 
-photo17 = Photo.create(title: "Photo by Ilja Tulit on Unsplash", user_id: user8.id)
-photo17.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/edWnNKj5LZ8fz5TsJAZFKmno"), filename: 'ilja-tulit-CoREQIuk1qM-unsplash.jpg')
+# photo17 = Photo.create(title: "Photo by Ilja Tulit on Unsplash", user_id: user8.id)
+# photo17.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/edWnNKj5LZ8fz5TsJAZFKmno"), filename: 'ilja-tulit-CoREQIuk1qM-unsplash.jpg')
 
-photo18 = Photo.create(title: "Photo by Felix Mittermeier on Unsplash", user_id: user9.id)
-photo18.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/oJW4e4D5GzTEwJzzoNgdcrJ1"), filename: 'felix-mittermeier-L4-16dmZ-1c-unsplash.jpg')
+# photo18 = Photo.create(title: "Photo by Felix Mittermeier on Unsplash", user_id: user9.id)
+# photo18.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/oJW4e4D5GzTEwJzzoNgdcrJ1"), filename: 'felix-mittermeier-L4-16dmZ-1c-unsplash.jpg')
 
-photo19 = Photo.create(title: "Photo by Emil Jarfelt on Unsplash", user_id: user9.id)
-photo19.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/uctQyMahywbB4PiMp3cgPyKd"), filename: 'emil-jarfelt-NROJUYgpjKE-unsplash.jpg')
+# photo19 = Photo.create(title: "Photo by Emil Jarfelt on Unsplash", user_id: user9.id)
+# photo19.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/uctQyMahywbB4PiMp3cgPyKd"), filename: 'emil-jarfelt-NROJUYgpjKE-unsplash.jpg')
 
-photo20 = Photo.create(title: "Photo by Anton Darius on Unsplash", user_id: user10.id)
-photo20.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/ehY1JrcpNky1uoteMUusa9mD"), filename: 'anton-darius-ebHCU8n7G38-unsplash.jpg')
+# photo20 = Photo.create(title: "Photo by Anton Darius on Unsplash", user_id: user10.id)
+# photo20.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/ehY1JrcpNky1uoteMUusa9mD"), filename: 'anton-darius-ebHCU8n7G38-unsplash.jpg')
 
 
 
