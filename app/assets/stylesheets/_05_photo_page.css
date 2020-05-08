@@ -46,6 +46,7 @@
     grid-template-rows: 550px ;
     grid-template-columns: 550px 550px ;
     grid-gap: 50px;
+    justify-content: center;
   
     
 }

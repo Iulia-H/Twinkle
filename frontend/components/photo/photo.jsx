@@ -18,10 +18,6 @@ class Photo extends React.Component{
                     <img src={this.props.photo.photoUrl}/>
                 </div>
                 <h1> {this.props.photo.title}</h1>
-                <div className="author">
-                    {/* {this.props.users.username} */}
-                    fghjkl;
-                </div>
                 <div className="elements">
                     <div className="comments">
                         <CommentsContainer />

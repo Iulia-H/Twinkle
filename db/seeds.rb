@@ -12,7 +12,7 @@ Comment.destroy_all
 Tag.destroy_all
 
 
-user1= User.create(username: "userDemo", password: "password")
+user1= User.create(username: "demoUser", password: "password")
 user2= User.create(username: "dogPerson", password: "password1")
 user3= User.create(username: "nature_lover", password: "password2")
 user4= User.create(username: "I_love_dessert", password: "password3")
@@ -26,7 +26,7 @@ user10= User.create(username: "HelloWorld", password: "password9")
 
 photo1 = Photo.create(title: "Photo by Simon Wilkes on Unsplash", user_id: user1.id)
 file1 = File.open("/Users/iulia/Desktop/images/simon-wilkes-py3Uw1QbK6A-unsplash.jpg")
-photo1.link.attach(io: file1, filename: 'simon-wilkes-py3Uw1QbK6A-unsplash.jpg')
+photo1.link.attach(io: File.open("/Users/iulia/Desktop/images/simon-wilkes-py3Uw1QbK6A-unsplash.jpg"), filename: 'simon-wilkes-py3Uw1QbK6A-unsplash.jpg')
 
 photo2 = Photo.create(title: "Photo by Tunafish Mayonnaise on Unsplash", user_id: user1.id)
 photo2.link.attach(io: File.open("/Users/iulia/Desktop/images/tunafish-mayonnaise-pSIt7op-mds-unsplash.jpg"), filename: 'tunafish-mayonnaise-pSIt7op-mds-unsplash.jpg')

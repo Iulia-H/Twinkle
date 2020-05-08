@@ -24,21 +24,23 @@ class Photos extends React.Component{
     render(){
         const photos = Object.values(this.props.photos)
         return(
-            <ul className="photo-list">
-                {photos.map(photo =>(
-                    <li key={`001/${photo.id}`} className="photo-item" > 
-                        <div>
-                            <h1></h1>
-                            <Link to={`/photos/${photo.id}`}>
-                            <img src={photo.photoURL} />
-                            </Link>
-                            <h1> {photo.title}</h1>
-
-                        </div>
-                    </li>
-                ))}
+            <div className="photos-container">
                 
-            </ul>
+                <ul className="photo-list">
+                    {photos.map(photo =>(
+                        <li key={`002/${photo.id}`} className="photo-item" > 
+                            <div>
+                                <h1></h1>
+                                <Link to={`/photos/${photo.id}`}>
+                                <img src={photo.photoURL} />
+                                </Link>
+                                <h1> {photo.title}</h1>
+                            </div>
+                        </li>
+                    ))}
+                    
+                </ul>
+            </div>
         )
     }
     

@@ -22,7 +22,7 @@ class Comments extends React.Component{
                         </li>
                 })}
                 <div>
-                    here
+                    
                 </div>
             </ul>
             
