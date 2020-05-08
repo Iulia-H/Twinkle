@@ -29,7 +29,7 @@ user10= User.create(username: "HelloWorld", password: "password9")
 # photo1.link.attach(io: open(https://twinkle-dev.s3-us-west-1.amazonaws.com/AKRcVuAyGfYLSFqH3SM3h6fN) ), filename: 'simon-wilkes-py3Uw1QbK6A-unsplash.jpg')
 
 photo2 = Photo.create(title: "Photo by Tunafish Mayonnaise on Unsplash", user_id: user1.id)
-photo2.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/HwCFLRSEezBwjSqFyTtnMshJ"),, filename: 'tunafish-mayonnaise-pSIt7op-mds-unsplash.jpg')
+photo2.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/HwCFLRSEezBwjSqFyTtnMshJ"), filename: 'tunafish-mayonnaise-pSIt7op-mds-unsplash.jpg')
 
 photo3 = Photo.create(title: "Photo by kilarov zaneit on Unsplash", user_id: user2.id)
 photo3.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/xVM2dR6DGrL5VdXrSMDacVkw"), filename: 'kilarov-zaneit-_387q_NwPLg-unsplash.jpg')
