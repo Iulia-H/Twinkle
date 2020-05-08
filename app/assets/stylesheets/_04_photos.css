@@ -60,32 +60,33 @@ input:last-child{
 
 .photo-list{
     position: absolute;
-    height: 91%;
     min-height: 91%;
     width: 100%;
     background-color: white;
     top: 9%;
-    bottom: 20%;
     color:black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    box-sizing: border-box;
+    display: inline-grid;
+    grid-template-rows: 550px 550px ;
+    grid-template-columns: 550px 550px ;
+    grid-gap: 60px;
     padding: 20px;
+    justify-content: center;
     align-items: center;
 }
 
 .photo-item {
-    min-height: 450px;
-    min-width: 450px;
+    /* max-height: 500px;
+    max-width: 500px; */
+    
     
 }
-.photo-item div{
-    position: relative;
-    padding: 15px;
+
+.photo-item div {
+
   
 }
 
-.photo-item img{
+.photo-item img {
     min-height: 100%;
     min-width: 100%;
     width: 100%;

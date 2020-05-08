@@ -3,7 +3,8 @@ import {getPhoto} from "../../actions/photos_actions";
 import Photo from "./photo";
 
 const mSTP = ({entities})=> ({
-    photo: entities.photos
+    photo: entities.photos,
+    user: entities.user
 });
 
 const mDTP = dispatch => ({

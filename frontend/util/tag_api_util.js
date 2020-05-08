@@ -14,10 +14,10 @@ export const createTag = tag => {
     });
 };
 
-export const getTags = () => {
+export const getTags = (photoId) => {
     // debugger
     return $.ajax({
-        url: "/api/tags",
+        url: `/api/photos/${photoId}/tags`,
         method: "Get"
     });
 };

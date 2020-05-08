@@ -32,8 +32,8 @@ export const createTag = tag => dispatch => (
 ));
 
 
-export const getTags = ()=> dispatch => (
-    APIUtil.getTags()
+export const getTags = (photoId)=> dispatch => (
+    APIUtil.getTags(photoId)
         .then(tags => dispatch(receiveTags(tags))
 ));
 

@@ -4,6 +4,7 @@ import { updateComment, deleteComment, getComments } from "../../actions/comment
 
 
 const mSTP = ({entities}) => ({
+    photo: entities.photos,
     comments: entities.comments
 });
 

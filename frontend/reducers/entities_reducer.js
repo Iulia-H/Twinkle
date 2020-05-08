@@ -6,10 +6,10 @@ import { combineReducers } from "redux";
 
 
 const entitiesReducer = combineReducers({
-    users: usersReducer,
     photos: photosReducer,
-    tags: tagsReducer,
-    comments: commentsReducer
+    users: usersReducer,
+    comments: commentsReducer,
+    tags: tagsReducer
 });
 
 export default entitiesReducer;

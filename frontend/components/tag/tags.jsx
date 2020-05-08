@@ -6,13 +6,16 @@ class Tags extends React.Component{
         this.state = this.props.getTags();
     }
 
-
+    componentWillUnmount(){
+        this.props.getTags();
+    }
     render(){
         const tags = Object.values(this.props.tags);
+        console.log(tags);
         return(
-            <ul>
+            <ul className="tags"> 
                 {tags.map(tag => {
-                    return <li key={tag.id}>
+                    return <li key={`003/${tag.id}`} >
                         <Tag 
                             tag={tag} 
                             deleteTag={this.props.deleteTag} 

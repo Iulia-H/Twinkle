@@ -13,13 +13,25 @@ class Photo extends React.Component{
 
     render() {
         return ( 
-            <div className="photo-container" >
-                <img src={this.props.photo.photoUrl}/>
+            <div className="page-container" >
+                <div className="photo-container">
+                    <img src={this.props.photo.photoUrl}/>
+                </div>
                 <h1> {this.props.photo.title}</h1>
-                <TagFormContainer/>
-                <TagsContainer />
-                <CommentFormContainer/>
-                <CommentsContainer/>
+                <div className="author">
+                    {/* {this.props.users.username} */}
+                    fghjkl;
+                </div>
+                <div className="elements">
+                    <div className="comments">
+                        <CommentsContainer />
+                        <CommentFormContainer className="comment-form"/>
+                    </div>
+                    <div className="tag-container">
+                        <TagsContainer />
+                        <TagFormContainer className="tag-form"/>
+                    </div>
+                </div>
             </div>
         )
     }

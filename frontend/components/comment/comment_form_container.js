@@ -3,8 +3,12 @@ import CommentForm from "./comment_form";
 import { createComment } from "../../actions/comments_actions";
 
 
-const mSTP = ({comment = {body: "", photo_id: "", user_id: ""}}) => ({
-    comment
+const mSTP = (state) => ({
+    comment: {
+        body: "",
+        photo_id: ""
+    },
+    photo: state.entities.photos
 });
 
 const mDTP = dispatch => ({

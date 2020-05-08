@@ -1,7 +1,7 @@
 class Api::CommentsController < ApplicationController
   def create
         @comment = Comment.new(comment_params)
-        # @comment.user_id = current_user.id
+        @comment.user_id = current_user.id
         if @comment.save
             render :show
         else
@@ -20,15 +20,15 @@ class Api::CommentsController < ApplicationController
     end
 
     def index
-        # @comments = Comment.where(photo_id: params[:photo_id])
-        @comments = Comment.all
+        @comments = Comment.where(photo_id: params[:photo_id])
+        # @comments = Comment.all
         render :index
     end
 
     def update
         @comment = Comment.find(params[:id])
-        # if @comment && @comment.user_id == current_user.id
-        if @comment.update(comment_params)
+        if @comment && @comment.user_id == current_user.id
+        # if @comment.update(comment_params)
             render :show
         else
             render json: @comment.errors.full_messages, status: 401
@@ -49,6 +49,6 @@ class Api::CommentsController < ApplicationController
 
     private
     def comment_params
-        params.require(:comment).permit(:body, :user_id, :photo_id )
+        params.require(:comment).permit(:body, :user_id, :photo_id)
     end
 end

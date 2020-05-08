@@ -1,9 +1,92 @@
-.photo-container{
+.page-container{
     position: absolute;
     height: 91%;
     min-height: 91%;
     width: 100%;
-    background-color: white;
     top: 9%;
-    bottom: 20%;
+
+}
+.photo-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: black;
+    height: 80%;
+    width: 100%;
+
+    /* overflow: hidden; */
+}
+
+.photo-container img{
+    max-height: 90%;
+    max-width: 90%;
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+.page-container h1{
+    font-size: x-large;
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+    padding: 5px;
+}
+
+.author{
+    display: block;
+    padding: 20px;
+}
+
+.elements{
+    padding: 30px;
+    display: grid;
+    grid-template-rows: 550px ;
+    grid-template-columns: 550px 550px ;
+    grid-gap: 50px;
+  
+    
+}
+.comment{
+    display: block;
+    box-sizing: border-box;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 70%;
+    height: 10%
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.tag{
+    display: block;
+    box-sizing: border-box;
+    background-color:rgb(168, 156, 156);
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.comment-form{
+    padding-bottom:50px ;
+   
+}
+.comment-form textarea{
+    display: block;
+    box-sizing: border-box;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    width: 70%;
+    height: 30%;
+    font-size: large;
 }
