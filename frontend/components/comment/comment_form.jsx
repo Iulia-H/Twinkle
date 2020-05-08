@@ -34,16 +34,6 @@ class CommentForm extends React.Component{
                     value={this.state.body} 
                     onChange={this.handleChange("body")}
                     placeholder="Comment"/>
-                    {/* <input 
-                    type="text" 
-                    value={this.state.photo_id} 
-                    onChange={this.handleChange("photo_id")}
-                    placeholder="photoid"/> */}
-                    {/* <input
-                        type="text"
-                        value={this.state.user_id}
-                        onChange={this.handleChange("user_id")}
-                        placeholder="userid" /> */}
                     <button type="submit">Submit</button>
                 </form>
             </div>

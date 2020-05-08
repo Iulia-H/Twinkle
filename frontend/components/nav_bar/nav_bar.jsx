@@ -10,10 +10,13 @@ class NavBar extends React.Component{
 
     welcomeMessage(){
       return(
-        <div className="message-container">
-          <p className="welcome-message"> Welcome {this.props.currentUser.username}!</p>
-          <button onClick={this.props.logout} className="logout">Log Out!</button>
-          {/* <button onClick={this.props.deleteAccount}>Delete Account</button> */}
+        <div className="buttons-for">
+            <Link to="/photo/new" className="material-icons">backup</Link>
+          <div className="message-container">
+            <p className="welcome-message"> Welcome {this.props.currentUser.username}!</p>
+            <button onClick={this.props.logout} className="logout">Log Out!</button>
+            {/* <button onClick={this.props.deleteAccount}>Delete Account</button> */}
+          </div>
         </div>
       )
     }
@@ -40,7 +43,10 @@ class NavBar extends React.Component{
       }
        return(
           <div className="nav-bar">
+            <div>
            <Link to="/" className="title">Twinkle</Link>
+           <Link to="/photos" className="photos-page">Photos</Link>
+            </div>
               <div >
               {this.props.currentUser ? 
               (this.welcomeMessage()

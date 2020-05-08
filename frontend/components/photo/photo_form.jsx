@@ -61,7 +61,10 @@ class PhotoForm extends React.Component{
                         onChange={this.handleChange("title")} 
                         placeholder="Photo title"/>
                     <br/>
-                    <input type="file" onChange={this.handlefFile}/> 
+                    <label className="upload">
+                        Upload file
+                        <input type="file" onChange={this.handlefFile} /> 
+                    </label>
                     <br/>
                     <button type="submit">Upload Photo</button>
                 </form>

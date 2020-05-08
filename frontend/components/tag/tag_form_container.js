@@ -3,8 +3,12 @@ import TagForm from "./tag_form";
 import { createTag } from "../../actions/tags_actions";
 
 
-const mSTP = ({tag = {body: "", photo_id: ""}}) => ({
-    tag
+const mSTP = ({entities}) => ({
+    tag:{
+        body: "",
+        photo_id: ""
+    },
+    photo: entities.photos
 });
 
 const mDTP = dispatch => ({

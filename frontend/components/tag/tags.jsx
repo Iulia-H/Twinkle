@@ -9,6 +9,7 @@ class Tags extends React.Component{
     componentWillUnmount(){
         this.props.getTags();
     }
+
     render(){
         const tags = Object.values(this.props.tags);
         console.log(tags);

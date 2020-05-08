@@ -10,12 +10,17 @@ class TagForm extends React.Component{
     }
     
     handleChange(field){
-        return (e) => this.setState({ [field]: e.target.value });
+        return (e) => {
+            this.setState({ [field]: e.target.value });
+            const id = this.props.photo.id;
+            this.setState({ photo_id: id });
+        };
     }
 
     handleSubmit(e){
         e.preventDefault();
         this.props.createTag(this.state);
+        this.setState({ body: "", photo_id: "" });
     }
 
 
@@ -28,11 +33,11 @@ class TagForm extends React.Component{
                     value={this.state.body} 
                     onChange={this.handleChange("body")}
                     placeholder="Tag Name"/>
-                    <input 
+                    {/* <input 
                     type="text" 
                     value={this.state.photo_id} 
                     onChange={this.handleChange("photo_id")}
-                    placeholder="id"/>
+                    placeholder="id"/> */}
                     <button type="submit">Submit</button>
                 </form>
             </div>

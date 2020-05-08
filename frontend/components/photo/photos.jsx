@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import React from "react";
 import { getPhotos } from "../../actions/photos_actions";
+import {Link } from 'react-router-dom';
 
 const mSTP = ({ entities }) => ({
     photos: entities.photos
@@ -17,6 +18,7 @@ class Photos extends React.Component{
     constructor(props){
         super(props);
         this.state = this.props.getPhotos();
+        
     }
 
     render(){
@@ -24,11 +26,14 @@ class Photos extends React.Component{
         return(
             <ul className="photo-list">
                 {photos.map(photo =>(
-                    <li key={`001/${photo.id}`} className="photo-item"> 
+                    <li key={`001/${photo.id}`} className="photo-item" > 
                         <div>
                             <h1></h1>
+                            <Link to={`/photos/${photo.id}`}>
                             <img src={photo.photoURL} />
+                            </Link>
                             <h1> {photo.title}</h1>
+
                         </div>
                     </li>
                 ))}
