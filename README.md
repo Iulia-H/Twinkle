@@ -21,7 +21,11 @@ Twinkle is a rails app, that uses Postgress for it's database managing and AWS S
     
   
   - ### Photo Uploading
-  Photo uploading can only be done by a user when they are signed in. The 
+    Photo uploading can only be done by a user when they are signed in. File hosting uses AWS in order to offer a larger ammount of photos and uploading capacity. 
+    
+    One of the challenges was making sure that the uploaded pictures were showing up on the page as well as styling the photos so that it will not go out of bounds. This was accomplished by setting the image source to the link attached to the photo entity.
 
 
 * ## Futher directions
+
+    While the backend for the comments and the tags is done, the frontend will need revisiting along with the styling and making sure the style fits with every browser.
