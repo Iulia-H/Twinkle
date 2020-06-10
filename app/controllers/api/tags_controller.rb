@@ -19,8 +19,8 @@ class Api::TagsController < ApplicationController
     end
 
     def index
-        # @tags = Tag.where(photo_id: params[:photo_id])
-        @tags = Tag.all
+        @tags = Tag.where(photo_id: params[:photo_id])
+        # @tags = Tag.all
         render :index
     end
 

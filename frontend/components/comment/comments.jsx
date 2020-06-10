@@ -1,16 +1,21 @@
 import React from "react";
 import Comment from "./comment";
 
+
 class Comments extends React.Component{
     constructor(props){
         super(props);
-        this.state = { comments: this.props.getComments(this.props.photo.id)};
         
     }
     
-    
+    componentWillUnmount(){
+        this.props.removeComments();
+    }
+        
     render(){
-        const comments = Object.values(this.props.comments);
+        // console.log(this.props.comments);
+        let comments = "";
+        comments =  Object.values(this.props.comments);
         return(
             <ul>
                 {comments.map(comment => {
@@ -25,6 +30,7 @@ class Comments extends React.Component{
                     
                 </div>
             </ul>
+            // <div>Hello</div>
             
         )
     }

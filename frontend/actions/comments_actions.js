@@ -3,6 +3,7 @@ export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const UPDATE_COMMENT = "UPDATE_COMMENT";
+export const REMOVE_COMMENTS = "REMOVE_COMMENTS";
 
 const receiveComment = (comment) =>({
     type: RECEIVE_COMMENT,
@@ -19,6 +20,10 @@ const removeComment = (commentId) => ({
     commentId
 });
 
+export const removeComments = ()=>({
+    type: REMOVE_COMMENTS
+})
+
 
 export const getComment = commentId => dispatch => (
     APIUtil.getComment(commentId)
@@ -32,10 +37,11 @@ export const createComment = comment => dispatch => (
 ));
 
 
-export const getComments = (photoId)=> dispatch => (
-    APIUtil.getComments(photoId)
+export const getComments = (photoId) => dispatch => {
+    // debugger;
+    return APIUtil.getComments(photoId)
         .then(comments => dispatch(receiveComments(comments))
-));
+)};
 
 export const updateComment = comment => dispatch => (
     APIUtil.updateComment(comment)

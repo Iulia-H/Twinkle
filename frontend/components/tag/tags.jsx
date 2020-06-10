@@ -1,13 +1,13 @@
 import React from "react";
 import Tag from "./tag";
+
 class Tags extends React.Component{
     constructor(props){
         super(props);
-        this.state = this.props.getTags();
     }
 
-    componentWillUnmount(){
-        this.props.getTags();
+    componentWillUnmount() {
+        this.props.removeTags();
     }
 
     render(){

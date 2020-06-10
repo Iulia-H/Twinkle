@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Tags from "./tags";
-import { updateTag, deleteTag, getTags } from "../../actions/tags_actions";
+import { updateTag, deleteTag, getTags, removeTags } from "../../actions/tags_actions";
 
 
 const mSTP = ({entities}) => ({
@@ -10,7 +10,8 @@ const mSTP = ({entities}) => ({
 const mDTP = dispatch => ({
     updateTag: (tag) => dispatch(updateTag(tag)),
     deleteTag: (tagId) => dispatch(deleteTag(tagId)),
-    getTags: () =>dispatch(getTags())
+    getTags: () =>dispatch(getTags()),
+    removeTags: () => dispatch(removeTags())
 });
 
 export default connect(mSTP, mDTP)(Tags);

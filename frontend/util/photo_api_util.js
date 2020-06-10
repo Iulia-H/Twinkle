@@ -22,4 +22,4 @@ export const getPhotos = ()=>(
         url: "/api/photos",
         method: "Get"
     })
-)
+);

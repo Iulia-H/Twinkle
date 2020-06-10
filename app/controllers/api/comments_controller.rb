@@ -20,8 +20,8 @@ class Api::CommentsController < ApplicationController
     end
 
     def index
-        # @comments = Comment.where(photo_id: params[:photo_id])
-        @comments = Comment.all
+        @comments = Comment.where(photo_id: params[:photo_id])
+        # @comments = Comment.all
         render :index
     end
 
