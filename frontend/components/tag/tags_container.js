@@ -4,7 +4,8 @@ import { updateTag, deleteTag, getTags, removeTags } from "../../actions/tags_ac
 
 
 const mSTP = ({entities}) => ({
-    tags: entities.tags
+    tags: entities.tags,
+    photos: entities.photos
 });
 
 const mDTP = dispatch => ({

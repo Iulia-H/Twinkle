@@ -3,7 +3,7 @@ export const RECEIVE_TAG = "RECEIVE_TAG";
 export const RECEIVE_TAGS = "RECEIVE_TAGS";
 export const REMOVE_TAG = "REMOVE_TAG";
 export const UPDATE_TAG = "UPDATE_TAG";
-export const REMOVE_TAGS = "REMOVE_TAG";
+export const REMOVE_TAGS = "REMOVE_TAGS";
 
 const receiveTag = (tag) =>({
     type: RECEIVE_TAG,
@@ -21,7 +21,7 @@ const removeTag = (tagId) => ({
 });
 
 export const removeTags = () => ({
-    type: REMOVE_TAGS,
+    type: REMOVE_TAGS
 });
 
 

@@ -13,6 +13,7 @@ const tagsReducer = (state = {}, action)=>{
             let newState = Object.assign({}, state);
             newState = [];
             return newState;
+            // return Object.assign({}, state, { tags: [] });
         case UPDATE_TAG:
             return Object.assign({}, state, action.tag);
         default:

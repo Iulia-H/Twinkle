@@ -19,6 +19,7 @@ class Api::TagsController < ApplicationController
     end
 
     def index
+        # debugger
         @tags = Tag.where(photo_id: params[:photo_id])
         # @tags = Tag.all
         render :index

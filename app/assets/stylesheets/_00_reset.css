@@ -58,3 +58,7 @@ table {
     background-color: aqua;
     font-family: sans-serif;
 } 
+
+#root{
+	font-family: 'Libre Baskerville', serif;
+}

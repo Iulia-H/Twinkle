@@ -1,5 +1,5 @@
-json.array! do |tag|
-    json.set! tag.id  do 
-        json.extract! tag, :id, :body, :photo_id
-    end
+
+json.array! @tags do |tag|
+
+    json.extract! tag, :id, :body, :photo_id
 end
