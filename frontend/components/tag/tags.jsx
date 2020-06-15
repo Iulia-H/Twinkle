@@ -12,7 +12,7 @@ class Tags extends React.Component{
 
     render(){
         const tags = Object.values(this.props.tags);
-        console.log(tags);
+        // console.log(tags);
         return(
             <ul className="tags"> 
                 {tags.map(tag => {

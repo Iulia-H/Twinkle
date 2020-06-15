@@ -35,7 +35,7 @@ class PhotoForm extends React.Component{
         formData.append("photo[title]", this.state.title);
         formData.append("photo[link]", this.state.link);
     
-        console.log(formData);
+        // console.log(formData);
         this.props.createPhoto(formData);
         this.setState({
             title: "",
@@ -50,7 +50,7 @@ class PhotoForm extends React.Component{
     }
 
     render(){
-        console.log(this.state);
+        // console.log(this.state);
         return(
             <div className="upload-box">
                 <h1>Upload Photo</h1>

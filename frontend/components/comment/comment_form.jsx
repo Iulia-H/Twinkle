@@ -20,7 +20,7 @@ class CommentForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         // console.log(id);
-        console.log(this.state);
+        // console.log(this.state);
         this.props.createComment(this.state);
         this.setState({body:"", photo_id:""});
     }
