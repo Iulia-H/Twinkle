@@ -48,6 +48,9 @@ class PhotoForm extends React.Component{
         e.preventDefault();
         this.setState({link: e.currentTarget.files[0]});
     }
+    componentWillUnmount(){
+        console.log("i've done it");
+    }
 
     render(){
         // console.log(this.state);

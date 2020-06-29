@@ -4,6 +4,8 @@ export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
 export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const UPDATE_COMMENT = "UPDATE_COMMENT";
 export const REMOVE_COMMENTS = "REMOVE_COMMENTS";
+export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_COMMENT_ERRORS';
+export const DELETE_COMMENT_ERRORS = "DELETE_COMMENT_ERRORS";
 
 const receiveComment = (comment) =>({
     type: RECEIVE_COMMENT,
@@ -20,6 +22,15 @@ const removeComment = (commentId) => ({
     commentId
 });
 
+const receiveErrors = errors => ({
+    type: RECEIVE_COMMENT_ERRORS,
+    errors
+});
+
+export const deleteErrors = () => ({
+    type: DELETE_COMMENT_ERRORS,
+});
+
 export const removeComments = ()=>({
     type: REMOVE_COMMENTS
 })
@@ -33,7 +44,8 @@ export const getComment = commentId => dispatch => (
 
 export const createComment = comment => dispatch => (
     APIUtil.createComment(comment)
-        .then(comment => dispatch(receiveComment(comment))
+        .then(comment => dispatch(receiveComment(comment)),
+    err => dispatch(receiveErrors(err.responseJSON))
 ));
 
 
@@ -45,7 +57,8 @@ export const getComments = (photoId) => dispatch => {
 
 export const updateComment = comment => dispatch => (
     APIUtil.updateComment(comment)
-        .then(comment => dispatch(receiveComment(comment))
+        .then(comment => dispatch(receiveComment(comment)),
+    err => dispatch(receiveErrors(err.responseJSON))
 ));
 
 export const deleteComment = commentId => dispatch =>(

@@ -3,7 +3,7 @@ import Comments from "./comments";
 import { updateComment, deleteComment, getComments, removeComments } from "../../actions/comments_actions";
 
 
-const mSTP = ({entities}) => ({
+const mSTP = ({entities}) => ({ 
     photos: entities.photos,
     comments: entities.comments
 });
