@@ -17,7 +17,8 @@ class PhotoForm extends React.Component{
         super(props);
         this.state= {
             title: "",
-            link: null
+            link: null,
+            url: null
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -39,21 +40,29 @@ class PhotoForm extends React.Component{
         this.props.createPhoto(formData);
         this.setState({
             title: "",
-            link: null
+            link: null,
+            url: null
         });
     }
 
     handlefFile(e){
-        // debugger
         e.preventDefault();
-        this.setState({link: e.currentTarget.files[0]});
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+        fileReader.onloadend = () => {
+
+            this.setState({link: file, url: fileReader.result});
+        };
+        if (file) {
+            fileReader.readAsDataURL(file);
+        }
     }
     componentWillUnmount(){
         console.log("i've done it");
     }
 
     render(){
-        // console.log(this.state);
+        const prev = this.state.url? <img src={this.state.url}/> : null;
         return(
             <div className="upload-box">
                 <h1>Upload Photo</h1>
@@ -64,6 +73,9 @@ class PhotoForm extends React.Component{
                         onChange={this.handleChange("title")} 
                         placeholder="Photo title"/>
                     <br/>
+                    <div className="image-preview">
+                        {prev}
+                    </div>
                     <label className="upload">
                         Upload file
                         <input type="file" onChange={this.handlefFile} /> 

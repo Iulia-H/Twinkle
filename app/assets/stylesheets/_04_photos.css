@@ -38,12 +38,18 @@
     align-items: center;
 
 }
+.image-preview img{
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+}
 
 input:first-child{
     /* width: 100px; */
     padding: 10px;
     font-size: large;
 }
+
 
 .upload{
     background-color: white;
