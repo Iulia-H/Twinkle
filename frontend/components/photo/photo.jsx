@@ -11,27 +11,36 @@ class Photo extends React.Component{
         this.state = this.props.getPhoto(this.props.match.params.id);
 
     }
+    renderElements(){
+        const photo = this.props.photo;
+        const comments = this.props.getComments(photo.id);
+        const tags = this.props.getTags(photo.id);
+        return (
+            <div className="elements">
+                <div className="comments">
+                    <CommentsContainer comments={comments} />
+                    <CommentFormContainer photoId={photo.id} className="comment-form" />
+                </div>
+                <div className="tag-container">
+                    <TagsContainer tags={tags} />
+                    <TagFormContainer photoId={photo.id} className="tag-form" />
+                </div>
+            </div>
+        )
+    }
    
     render() {
         const photo = this.props.photo;
         const comments = this.props.getComments(photo.id);
         const tags = this.props.getTags(photo.id);
+        console.log(photo.id);
         return ( 
             <div className="page-container" >
                 <div className="photo-container">
                     <img src={photo.photoUrl}/>
                 </div>
                 <h1> {photo.title}</h1>
-                <div className="elements">
-                    <div className="comments">
-                        <CommentsContainer comments={comments}/>
-                        <CommentFormContainer className="comment-form"/>
-                    </div>
-                    <div className="tag-container">
-                        <TagsContainer tags={tags}/>
-                        <TagFormContainer className="tag-form"/>
-                    </div>
-                </div>
+                {photo.id ? this.renderElements() : "" }
             </div>
         )
     }

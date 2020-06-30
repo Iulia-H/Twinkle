@@ -3,26 +3,31 @@ import React from "react";
 class CommentForm extends React.Component{
     constructor(props){
         super(props);
-        this.state = this.props.comment;
-        
+        this.state =  {
+            body: "",
+            photo_id: this.props.photoId
+            },
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log(this.props.photoId);
+        
     }
     
     handleChange(field){
         return (e) => {
             this.setState({ [field]: e.target.value });
-            const id = this.props.photo.id;
-            this.setState({photo_id: id});
+            
+            // e.preventDefault();
+           
         };
     }
 
     handleSubmit(e){
         e.preventDefault();
-        // console.log(id);
-        // console.log(this.state);
+        const id = this.props.photoId;
+        this.setState({ photo_id: id });
         this.props.createComment(this.state);
-        this.setState({body:"", photo_id:""});
+        this.setState({body:"", photo_id: this.props.photoId});
     }
 
 

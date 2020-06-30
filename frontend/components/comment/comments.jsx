@@ -13,7 +13,6 @@ class Comments extends React.Component{
     }
         
     render(){
-        // console.log(this.props.comments);
         let comments = "";
         comments =  Object.values(this.props.comments);
         return(
@@ -30,8 +29,6 @@ class Comments extends React.Component{
                     
                 </div>
             </ul>
-            // <div>Hello</div>
-            
         )
     }
 }
