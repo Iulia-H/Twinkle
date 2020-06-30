@@ -22,6 +22,7 @@ class Api::PhotosController < ApplicationController
             render :show
         else
             render json: @photo.errors.full_messages, status: 401
+
         end
     end
 

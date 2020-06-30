@@ -44,6 +44,6 @@ export const getPhotos = () => dispatch => (
 export const createPhoto = photo => dispatch => (
     APIUtil.createPhoto(photo)
         .then(photo => dispatch(receivePhoto(photo)),
-    err => dispatch(receiveErrors(err.responseJSON))
+    err => dispatch(err.responseJSON ? receiveErrors(err.responseJSON) : receiveErrors(["Please upload a picture"]))
 ));
 

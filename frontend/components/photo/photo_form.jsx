@@ -1,15 +1,16 @@
 import { connect } from "react-redux";
-import { createPhoto } from "../../actions/photos_actions";
+import { createPhoto, deleteErrors } from "../../actions/photos_actions";
 import React from "react";
 
 
-const mSTP = ({ errors }) => ({
-    errors: errors
+const mSTP = ({ errors, entities }) => ({
+    errors: errors,
+    photos: entities.photos
 });
 
 const mDTP = dispatch => ({
-    createPhoto: (photo) => dispatch(createPhoto(photo))
-    // deleteErrors: () => dispatch(deleteErrors())
+    createPhoto: (photo) => dispatch(createPhoto(photo)),
+    deleteErrors: () => dispatch(deleteErrors())
 });
 
 class PhotoForm extends React.Component{
@@ -23,6 +24,7 @@ class PhotoForm extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.handlefFile = this.handlefFile.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
  
     }
 
@@ -45,6 +47,7 @@ class PhotoForm extends React.Component{
         });
     }
 
+
     handlefFile(e){
         e.preventDefault();
         const file = e.currentTarget.files[0];
@@ -57,9 +60,31 @@ class PhotoForm extends React.Component{
             fileReader.readAsDataURL(file);
         }
     }
-    componentWillUnmount(){
-        console.log("i've done it");
+
+    renderErrors() {
+        const { errors } = this.props.errors.photo;
+        // console.log(this.props.errors.photo)
+        if (errors) {
+            return (
+
+                <ul className="error-message">
+                    {errors.map((error, i) => {
+                        return <li key={i}>{error}</li>
+                    })}
+                </ul>
+            )
+
+        }
     }
+
+    componentWillUnmount() {
+        if (this.props.errors) {
+            this.props.deleteErrors();
+        } else {
+            this.props.history.push("/photos");
+        }
+    }
+
 
     render(){
         const prev = this.state.url? <img src={this.state.url}/> : null;
@@ -83,6 +108,9 @@ class PhotoForm extends React.Component{
                     <br/>
                     <button type="submit">Upload Photo</button>
                 </form>
+                <div>
+                    {this.renderErrors()}
+                </div>
             </div>
 
         )
