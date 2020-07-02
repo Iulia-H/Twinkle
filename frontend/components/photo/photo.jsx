@@ -28,6 +28,10 @@ class Photo extends React.Component{
             </div>
         )
     }
+
+    componentWillUnmount() {
+        this.props.removePhoto();
+    }
    
     render() {
         const photo = this.props.photo;

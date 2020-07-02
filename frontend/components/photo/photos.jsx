@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import React from "react";
-import { getPhotos } from "../../actions/photos_actions";
+import { getPhotos, removePhotos} from "../../actions/photos_actions";
 import {Link } from 'react-router-dom';
 
 const mSTP = ({ entities }) => ({
@@ -9,6 +9,7 @@ const mSTP = ({ entities }) => ({
 
 const mDTP = dispatch => ({
     getPhotos: () => dispatch(getPhotos()),
+    removePhotos: () => dispatch(removePhotos())
 
     // deleteErrors: () => dispatch(deleteErrors())
 });
@@ -19,6 +20,9 @@ class Photos extends React.Component{
         super(props);
         this.state = this.props.getPhotos();
         
+    }
+    componentWillUnmount(){
+        this.props.removePhotos();
     }
 
     render(){

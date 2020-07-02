@@ -25,6 +25,7 @@ class PhotoForm extends React.Component{
         this.handleChange = this.handleChange.bind(this);
         this.handlefFile = this.handlefFile.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
+        
  
     }
 
@@ -37,14 +38,18 @@ class PhotoForm extends React.Component{
         const formData = new FormData();
         formData.append("photo[title]", this.state.title);
         formData.append("photo[link]", this.state.link);
-    
-        // console.log(formData);
         this.props.createPhoto(formData);
+
         this.setState({
             title: "",
             link: null,
             url: null
         });
+        if (this.props.photos.id) {
+            console.log(this.props.photos);
+            // this.props.history.push(`/photos/${this.props.photos.id}`)
+        } 
+     
     }
 
 
@@ -63,7 +68,6 @@ class PhotoForm extends React.Component{
 
     renderErrors() {
         const { errors } = this.props.errors.photo;
-        // console.log(this.props.errors.photo)
         if (errors) {
             return (
 
@@ -79,15 +83,19 @@ class PhotoForm extends React.Component{
 
     componentWillUnmount() {
         if (this.props.errors) {
-            this.props.deleteErrors();
-        } else {
-            this.props.history.push("/photos");
+            this.props.deleteErrors();    
         }
+        console.log("deleted stuff")
     }
 
 
     render(){
-        const prev = this.state.url? <img src={this.state.url}/> : null;
+        const preview = this.state.url? <img src={this.state.url}/> : null;
+        if (this.props.photos.id) {
+            console.log(this.props.photos);
+            // this.props.history.push(`/photos/${this.props.photos.id}`)
+        } 
+       
         return(
             <div className="upload-box">
                 <h1>Upload Photo</h1>
@@ -99,7 +107,7 @@ class PhotoForm extends React.Component{
                         placeholder="Photo title"/>
                     <br/>
                     <div className="image-preview">
-                        {prev}
+                        {preview}
                     </div>
                     <label className="upload">
                         Upload file

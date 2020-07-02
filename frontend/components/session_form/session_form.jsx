@@ -30,28 +30,28 @@ class SessionForm extends React.Component{
         
     }
     
-    // componentWillUnmount(){
-    //     if (this.props.errors){
-    //         this.props.deleteErrors();
-    //     }else{
-    //         this.props.history.push("/photos");
-    //     }
-    // }
+    componentWillUnmount(){
+        if (this.props.errors){
+            this.props.deleteErrors();
+        }else{
+            this.props.history.push("/photos");
+        }
+    }
 
-    // renderErrors(){
-    //     const { errors } = this.props.errors;
-    //     if (errors) {
-    //         return(
+    renderErrors(){
+        const { errors } = this.props.errors;
+        if (errors) {
+            return(
                 
-    //             <ul className="error-messages">
-    //                {errors.map((error, i) =>{
-    //                    return <li key={i}>{error}</li>
-    //                })}
-    //            </ul>
-    //         )
+                <ul className="error-messages">
+                   {errors.map((error, i) =>{
+                       return <li key={i}>{error}</li>
+                   })}
+               </ul>
+            )
 
-    //     }
-    // }
+        }
+    }
 
     logInDemo(e){
         e.preventDefault();

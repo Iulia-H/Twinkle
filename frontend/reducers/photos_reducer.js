@@ -1,4 +1,4 @@
-import {RECEIVE_PHOTO, RECEIVE_PHOTOS} from "../actions/photos_actions";
+import { RECEIVE_PHOTO, RECEIVE_PHOTOS, REMOVE_PHOTO, REMOVE_PHOTOS} from "../actions/photos_actions";
 
 const photosReducer = (state = {}, action) =>{
     Object.freeze(state);
@@ -10,6 +10,14 @@ const photosReducer = (state = {}, action) =>{
         case RECEIVE_PHOTOS:
             // return Object.assign({}, state, action.photos);
             newState = action.photos;
+            return newState;
+        case REMOVE_PHOTO:
+            newState = Object.assign({}, state);
+            newState = [];
+            return newState;
+        case REMOVE_PHOTOS:
+            newState = Object.assign({}, state);
+            newState = [];
             return newState;
         default:
             return state;

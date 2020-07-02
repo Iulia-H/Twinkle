@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import {getPhoto} from "../../actions/photos_actions";
 import {getComments} from "../../actions/comments_actions";
 import {getTags} from "../../actions/tags_actions";
+import {removePhoto} from "../../actions/photos_actions";
 import Photo from "./photo";
 
 const mSTP = ({entities})=> ({
@@ -12,7 +13,8 @@ const mSTP = ({entities})=> ({
 const mDTP = dispatch => ({
     getPhoto: (photoId) => dispatch(getPhoto(photoId)),
     getComments: (photoId) => dispatch(getComments(photoId)),
-    getTags: (photoId) => dispatch(getTags(photoId))
+    getTags: (photoId) => dispatch(getTags(photoId)),
+    removePhoto: () => dispatch(removePhoto())
     // deleteErrors: () => dispatch(deleteErrors())
 });
 

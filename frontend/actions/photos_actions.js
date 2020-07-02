@@ -4,7 +4,8 @@ export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const CREATE_PHOTO = "CREATE_PHOTO";
 export const RECEIVE_PHOTO_ERRORS = 'RECEIVE_PHOTO_ERRORS';
 export const DELETE_PHOTO_ERRORS = "DELETE_PHOTO_ERRORS";
-
+export const REMOVE_PHOTO = "REMOVE_PHOTO";
+export const REMOVE_PHOTOS = "REMOVE_PHOTOS";
 
 const receivePhoto = photo =>({
     type: RECEIVE_PHOTO,
@@ -21,13 +22,21 @@ const sentPhoto = photo =>({
     photo
 });
 
+export const removePhoto = () => ({
+    type: REMOVE_PHOTO
+})
+
+export const removePhotos = () => ({
+    type: REMOVE_PHOTOS
+})
+
 const receiveErrors = errors => ({
     type: RECEIVE_PHOTO_ERRORS,
     errors
 });
 
 export const deleteErrors = () => ({
-    type: DELETE__PHOTO_ERRORS,
+    type: DELETE_PHOTO_ERRORS,
 
 });
 
