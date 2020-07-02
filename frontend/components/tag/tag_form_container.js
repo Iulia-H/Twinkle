@@ -1,18 +1,16 @@
 import { connect } from "react-redux";
 import TagForm from "./tag_form";
-import { createTag } from "../../actions/tags_actions";
+import { createTag, deleteErrors } from "../../actions/tags_actions";
 
 
-const mSTP = ({entities}) => ({
-    tag:{
-        body: "",
-        photo_id: ""
-    },
-    photo: entities.photos
+const mSTP = ({entities, errors}) => ({
+    photo: entities.photos,
+    errors: errors.tag.errors
 });
 
 const mDTP = dispatch => ({
-    createTag: (tag) => dispatch(createTag(tag))
+    createTag: (tag) => dispatch(createTag(tag)),
+    deleteErrors: () => dispatch(deleteErrors())
 });
 
 export default connect(mSTP, mDTP)(TagForm);

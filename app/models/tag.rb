@@ -1,4 +1,6 @@
 class Tag < ApplicationRecord
+    validates :body, presence: true
+      validates :photo_id, presence: true
 
     has_many :photo_tags,
         foreign_key: :tag_id,

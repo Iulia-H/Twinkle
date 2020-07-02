@@ -3,7 +3,10 @@ import React from "react";
 class TagForm extends React.Component{
     constructor(props){
         super(props);
-        this.state = this.props.tag;
+        this.state = {
+            body: "",
+            photo_id: this.props.photoId
+        };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,12 +24,38 @@ class TagForm extends React.Component{
         e.preventDefault();
         this.props.createTag(this.state);
         this.setState({ body: "", photo_id: "" });
+        this.props.deleteErrors();
+    }
+
+    componentWillUnmount() {
+        if (this.props.errors) {
+            this.props.deleteErrors();
+        }
+    }
+
+    renderErrors() {
+        const errors  = this.props.errors;
+        if (errors) {
+            return (
+
+                <ul className="error-messages">
+                    {errors.map((error, i) => {
+                        return <li key={i}>{error}</li>
+                    })}
+                </ul>
+            )
+
+        }
     }
 
 
     render(){
+        console.log(this.props.errors)
         return(
             <div>
+                <div>
+                    {this.renderErrors()}
+                </div>
                 <form onSubmit={this.handleSubmit}>
                     <input 
                     type="text" 
