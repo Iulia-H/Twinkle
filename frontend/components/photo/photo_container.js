@@ -7,7 +7,7 @@ import Photo from "./photo";
 
 const mSTP = ({entities})=> ({
     photo: entities.photos,
-    user: entities.user
+    user: entities.users
 });
 
 const mDTP = dispatch => ({

@@ -17,6 +17,11 @@ class Api::UsersController < ApplicationController
         render "static_pages/root"
         #find a better way of getting to the main page
     end
+
+    def show
+        @user = User.find_by(params[:id])
+        render "api/users/show"
+    end
     
     private
     

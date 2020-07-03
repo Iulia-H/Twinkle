@@ -38,7 +38,8 @@ class PhotoForm extends React.Component{
         const formData = new FormData();
         formData.append("photo[title]", this.state.title);
         formData.append("photo[link]", this.state.link);
-        this.props.createPhoto(formData);
+        this.props.createPhoto(formData)
+            .then(() => this.props.history.push(`/photos/${this.props.photos.id}`));
 
         this.setState({
             title: "",
@@ -47,7 +48,7 @@ class PhotoForm extends React.Component{
         });
         if (this.props.photos.id) {
             console.log(this.props.photos);
-            // this.props.history.push(`/photos/${this.props.photos.id}`)
+            this.props.history.push(`/photos/${this.props.photos.id}`)
         } 
      
     }
@@ -70,7 +71,6 @@ class PhotoForm extends React.Component{
         const { errors } = this.props.errors.photo;
         if (errors) {
             return (
-
                 <ul className="error-message">
                     {errors.map((error, i) => {
                         return <li key={i}>{error}</li>
@@ -78,6 +78,11 @@ class PhotoForm extends React.Component{
                 </ul>
             )
 
+        }else{
+            if (this.props.photos.id) {
+                console.log(this.props.photos);
+                this.props.history.push(`/photos/${this.props.photos.id}`)
+            } 
         }
     }
 

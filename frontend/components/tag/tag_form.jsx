@@ -23,7 +23,7 @@ class TagForm extends React.Component{
     handleSubmit(e){
         e.preventDefault();
         this.props.createTag(this.state);
-        this.setState({ body: "", photo_id: "" });
+        this.setState({ body: ""});
         this.props.deleteErrors();
     }
 

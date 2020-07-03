@@ -15,15 +15,27 @@ class Photo extends React.Component{
         const photo = this.props.photo;
         const comments = this.props.getComments(photo.id);
         const tags = this.props.getTags(photo.id);
+        const user = Object.values(this.props.user)[0];
+        console.log(user);
         return (
             <div className="elements">
                 <div className="comments">
                     <CommentsContainer comments={comments} />
-                    <CommentFormContainer photoId={photo.id} className="comment-form" />
+                    {user ?
+                        <div>
+                            <TagFormContainer photoId={photo.id} className="tag-form" />
+                        </div>
+                        : ""
+                    }
                 </div>
                 <div className="tag-container">
                     <TagsContainer tags={tags} />
-                    <TagFormContainer photoId={photo.id} className="tag-form" />
+                    {(this.props.photo && user && (user.id === this.props.photo.user_id))?
+                        <div>
+                            <TagFormContainer photoId={photo.id} className="tag-form" />
+                        </div>
+                        : ""
+                    }
                 </div>
             </div>
         )
@@ -44,6 +56,9 @@ class Photo extends React.Component{
                     <img src={photo.photoUrl}/>
                 </div>
                 <h1> {photo.title}</h1>
+                {/* <div>
+                    picture uploaded by {photo.id}
+                </div> */}
                 {photo.id ? this.renderElements() : "" }
             </div>
         )
