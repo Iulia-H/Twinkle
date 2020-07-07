@@ -23,10 +23,8 @@ class Photo extends React.Component{
                 <div className="comments">
                     <CommentsContainer comments={comments} user={user}/>
                     {currentUser ?
-                        <div>
                             <CommentFormContainer photoId={photo.id} className="comment-form" />
-                        </div>
-                        : ""
+                        : null
                     }
                 </div>
                 <div className="tag-container">
@@ -56,7 +54,7 @@ class Photo extends React.Component{
                 <div className="photo-container">
                     <img src={photo.photoUrl}/>
                 </div>
-                <h1> {photo.title}</h1>
+                <h1 className="photo-title"> {photo.title}</h1>
                 {/* <div>
                     picture uploaded by {photo.id}
                 </div> */}

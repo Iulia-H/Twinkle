@@ -61,7 +61,7 @@ class TagForm extends React.Component{
                     type="text" 
                     value={this.state.body} 
                     onChange={this.handleChange("body")}
-                    placeholder="Tag Name"/>
+                    placeholder="Add a tag"/>
                     <br/>
                     {/* <input 
                     type="text" 

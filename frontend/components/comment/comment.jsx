@@ -10,9 +10,9 @@ class Comment extends React.Component{
         console.log(this.props.user.username);
         return(
             <div className="comment">
-                <h1>{this.props.user.username}</h1>
+                <h1 className="username">{this.props.user.username}</h1>
                 {/* {this.props.comment.user_id} */}
-                {this.props.comment.body}
+                <p className="content">{this.props.comment.body}</p>
             </div>
         )
     }

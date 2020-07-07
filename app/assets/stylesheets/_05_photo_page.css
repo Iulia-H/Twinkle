@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    background-color: black;
+    background-color: rgb(39, 39, 41);
     height: 80%;
     width: 100%;
 
@@ -27,9 +27,9 @@
     object-fit: contain;
 }
 
-.page-container h1{
+.photo-title {
     font-size: x-large;
-    background-color: black;
+    background-color: rgb(39, 39, 41);
     color: blanchedalmond;
     text-align: center;
     padding: 5px;
@@ -51,15 +51,25 @@
     
 }
 .comment{
-    display: block;
+    display: flex;
     box-sizing: border-box;
-    border-color: black;
-    border-style: solid;
-    border-width: thin;
     padding: 20px;
-    margin-bottom: 30px;
-    width: 70%;
-    height: 10%
+    height: 15%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.comment:hover{
+    background-color: white;
+}
+
+.username{
+    padding-bottom: 10px;
+    color: rgb(34, 36, 185);
+    font-size: small;
+}
+.content{
+    font-size: small;
+    line-height: 1.6;
 }
 
 .tags{
@@ -78,16 +88,40 @@
 }
 
 .comment-form{
-    padding-bottom:50px ;
-   
+    padding: 20px;
+    padding-bottom: 70px;   
+    display: flex;
+    flex-direction: column;
 }
+
+
 .comment-form textarea{
     display: block;
     box-sizing: border-box;
+    padding: 15px;
     border-color: black;
     border-style: solid;
     border-width: thin;
-    width: 70%;
-    height: 30%;
+    width: 80%;
+    height: 50%;
     font-size: large;
+    margin-bottom: 15px;
+}
+.error-container{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 5px
+}
+.error-messagesss{
+    width: 80%;
+    background-color: rgb(233, 210, 210);
+    color: rgb(56, 54, 54);
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px
+}
+
+.comment-form button{
+    align-self: flex-end;
+    margin-right: 20%;
 }
