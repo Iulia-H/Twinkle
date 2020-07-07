@@ -18,8 +18,10 @@ class Comments extends React.Component{
         return(
             <ul>
                 {comments.map(comment => {
+                    
                     return <li key={comment.id} >
                         <Comment
+                            user = {this.props.user}
                             comment={comment} 
                             deleteComment={this.props.deleteComment} 
                             updateComment={this.props.updateComment} />

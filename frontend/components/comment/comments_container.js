@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import Comments from "./comments";
 import { updateComment, deleteComment, getComments, removeComments } from "../../actions/comments_actions";
+import { getUser } from "../../actions/user_actions";
 
 
 const mSTP = ({entities}) => ({ 

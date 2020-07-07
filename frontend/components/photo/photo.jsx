@@ -15,22 +15,23 @@ class Photo extends React.Component{
         const photo = this.props.photo;
         const comments = this.props.getComments(photo.id);
         const tags = this.props.getTags(photo.id);
-        const user = Object.values(this.props.user)[0];
-        console.log(user);
+        const currentUser = Object.values(this.props.user)[0];
+        const user = this.props.photo.user;
+        console.log(currentUser);
         return (
             <div className="elements">
                 <div className="comments">
-                    <CommentsContainer comments={comments} />
-                    {user ?
+                    <CommentsContainer comments={comments} user={user}/>
+                    {currentUser ?
                         <div>
-                            <TagFormContainer photoId={photo.id} className="tag-form" />
+                            <CommentFormContainer photoId={photo.id} className="comment-form" />
                         </div>
                         : ""
                     }
                 </div>
                 <div className="tag-container">
                     <TagsContainer tags={tags} />
-                    {(this.props.photo && user && (user.id === this.props.photo.user_id))?
+                    {(this.props.photo && currentUser &&(user.id === this.props.photo.user_id))?
                         <div>
                             <TagFormContainer photoId={photo.id} className="tag-form" />
                         </div>

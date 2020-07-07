@@ -98,7 +98,6 @@ class PhotoForm extends React.Component{
         const preview = this.state.url? <img src={this.state.url}/> : null;
         if (this.props.photos.id) {
             console.log(this.props.photos);
-            // this.props.history.push(`/photos/${this.props.photos.id}`)
         } 
        
         return(
