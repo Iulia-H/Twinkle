@@ -80,11 +80,32 @@
 
 .tag{
     display: block;
+    border-radius: 8px;
     box-sizing: border-box;
-    background-color:rgb(168, 156, 156);
+    background-color:rgb(186, 210, 211);
     padding: 5px;
     margin: 10px;
 
+}
+
+.tag-form{
+    box-sizing: border-box;
+    height: 50%;
+    font-size: large;
+    padding-top: 15px;
+    display: flex;
+}
+
+.tag-form input{
+    width: 30%;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+.tag-form button{
+    box-sizing: border-box;
+    font-size: medium;
+    margin-left: 10px;
 }
 
 .comment-form{
@@ -93,6 +114,7 @@
     display: flex;
     flex-direction: column;
 }
+
 
 
 .comment-form textarea{
@@ -106,6 +128,7 @@
     height: 50%;
     font-size: large;
     margin-bottom: 15px;
+    border-radius: 3px;
 }
 .error-container{
     width: 80%;

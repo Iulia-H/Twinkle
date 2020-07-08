@@ -56,7 +56,7 @@ class TagForm extends React.Component{
                 <div>
                     {this.renderErrors()}
                 </div>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className="tag-form">
                     <input 
                     type="text" 
                     value={this.state.body} 
