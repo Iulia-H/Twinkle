@@ -37,8 +37,7 @@ class TagForm extends React.Component{
         const errors  = this.props.errors;
         if (errors) {
             return (
-
-                <ul className="error-messages">
+                <ul className="tag-error-messages">
                     {errors.map((error, i) => {
                         return <li key={i}>{error}</li>
                     })}
@@ -53,21 +52,13 @@ class TagForm extends React.Component{
         console.log(this.props.errors)
         return(
             <div>
-                <div>
-                    {this.renderErrors()}
-                </div>
                 <form onSubmit={this.handleSubmit} className="tag-form">
                     <input 
                     type="text" 
                     value={this.state.body} 
                     onChange={this.handleChange("body")}
                     placeholder="Add a tag"/>
-                    <br/>
-                    {/* <input 
-                    type="text" 
-                    value={this.state.photo_id} 
-                    onChange={this.handleChange("photo_id")}
-                    placeholder="id"/> */}
+                    {this.renderErrors()}
                     <button type="submit">Submit</button>
                 </form>
             </div>

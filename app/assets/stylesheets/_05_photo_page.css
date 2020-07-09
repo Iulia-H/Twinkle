@@ -94,18 +94,24 @@
     font-size: large;
     padding-top: 15px;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .tag-form input{
     width: 30%;
     font-size: medium;
     border-radius: 5px;
+    align-self: flex-end;
 }
 
 .tag-form button{
     box-sizing: border-box;
-    font-size: medium;
+    width: 11%;
+    font-size: small;
     margin-left: 10px;
+    align-self: flex-end;
+    margin-top: 15px;
 }
 
 .comment-form{
@@ -141,7 +147,19 @@
     color: rgb(56, 54, 54);
     box-sizing: border-box;
     padding: 10px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-size: small;
+}
+.tag-error-messages{
+    
+    width: 34%;
+    background-color: rgb(233, 210, 210);
+    color: rgb(56, 54, 54);
+    box-sizing: border-box;
+    padding: 7px;
+    margin-top: 15px;
+    align-self: flex-end;
+    font-size: small;
 }
 
 .comment-form button{
