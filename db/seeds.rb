@@ -16,7 +16,7 @@ Tag.destroy_all
 user1= User.create(username: "demoUser", password: "password")
 user2= User.create(username: "dogPerson", password: "password1")
 user3= User.create(username: "nature_lover", password: "password2")
-user4= User.create(username: "I_love_dessert", password: "password3")
+user4= User.create(username: "I_love_desert", password: "password3")
 user5= User.create(username: "ProfessionalPhotographer", password: "password4")
 user6= User.create(username: "Animals", password: "password5")
 user7= User.create(username: "Nature_pics", password: "password6")
@@ -28,17 +28,40 @@ user10= User.create(username: "HelloWorld", password: "password9")
 photo1 = Photo.create(title: "Photo by Simon Wilkes on Unsplash", user_id: user1.id)
 photo1.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/AKRcVuAyGfYLSFqH3SM3h6fN"), filename: 'simon-wilkes-py3Uw1QbK6A-unsplash.jpg')
 
+sunrise = Tag.create(body: "sunrise", photo_id: photo1.id )
+nature = Tag.create(body: "nature", photo_id: photo1.id )
+trees = Tag.create(body: "trees", photo_id: photo1.id )
+calm = Tag.create(body: "calm", photo_id: photo1.id )
+
+
 photo2 = Photo.create(title: "Photo by Tunafish Mayonnaise on Unsplash", user_id: user1.id)
 photo2.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/HwCFLRSEezBwjSqFyTtnMshJ"), filename: 'tunafish-mayonnaise-pSIt7op-mds-unsplash.jpg')
+
+spring = Tag.create(body: "spring", photo_id: photo2.id )
+nature = Tag.create(body: "nature", photo_id: photo2.id )
+mountain = Tag.create(body: "mountain", photo_id: photo2.id )
 
 photo3 = Photo.create(title: "Photo by kilarov zaneit on Unsplash", user_id: user2.id)
 photo3.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/xVM2dR6DGrL5VdXrSMDacVkw"), filename: 'kilarov-zaneit-_387q_NwPLg-unsplash.jpg')
 
+desert = Tag.create(body: "desert", photo_id: photo3.id )
+nature = Tag.create(body: "nature", photo_id: photo3.id )
+mountain = Tag.create(body: "mountain", photo_id: photo3.id )
+
 photo4 = Photo.create(title: "Photo by Mat Reding on Unsplash", user_id: user2.id)
 photo4.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/Vvd9pScvtjs9S5zp82LJwqgw"), filename: 'mat-reding-pFQWfA5rHDc-unsplash.jpg')
 
+flowers = Tag.create(body: "flowers", photo_id: photo4.id )
+nature = Tag.create(body: "nature", photo_id: photo4.id )
+
+
 photo5 = Photo.create(title: "Photo by Jeremy Thomas on Unsplash", user_id: user3.id)
 photo5.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/qoWV2CCwA2iDoSQ2YhxxSfAz"), filename: 'jeremy-thomas-E0AHdsENmDg-unsplash.jpg')
+
+space = Tag.create(body: "space", photo_id: photo5.id )
+nature = Tag.create(body: "nature", photo_id: photo5.id )
+mountain = Tag.create(body: "mountain", photo_id: photo5.id )
+
 
 photo6 = Photo.create(title: "Photo by NASA on Unsplash", user_id: user3.id)
 photo6.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/rFvsMNzzrCSNd9EzwtB5eJ8E"), filename: 'nasa-Q1p7bh3SHj8-unsplash.jpg')
