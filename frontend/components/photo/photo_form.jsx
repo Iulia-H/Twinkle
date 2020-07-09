@@ -78,12 +78,8 @@ class PhotoForm extends React.Component{
                 </ul>
             )
 
-        }else{
-            if (this.props.photos.id) {
-                console.log(this.props.photos);
-                this.props.history.push(`/photos/${this.props.photos.id}`)
-            } 
         }
+        
     }
 
     componentWillUnmount() {

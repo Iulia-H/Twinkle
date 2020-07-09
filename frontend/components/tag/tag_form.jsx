@@ -35,7 +35,7 @@ class TagForm extends React.Component{
 
     renderErrors() {
         const errors  = this.props.errors;
-        if (errors) {
+        if (errors && errors.length > 0) {
             return (
                 <ul className="tag-error-messages">
                     {errors.map((error, i) => {

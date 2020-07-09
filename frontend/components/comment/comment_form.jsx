@@ -1,5 +1,8 @@
 import React from "react";
 
+import { Link } from 'react-router-dom';
+
+
 class CommentForm extends React.Component{
     constructor(props){
         super(props);
@@ -22,12 +25,18 @@ class CommentForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        const id = this.props.photoId;
-        this.setState({ photo_id: id });
-        this.props.createComment(this.state);
-        this.props.deleteErrors();
-        this.setState({body:"", photo_id: this.props.photoId});
-        
+        const user = Object.values(this.props.currentUser);
+        if (user.id){
+            console.log(this.props.currentUser)
+            const id = this.props.photoId;
+            this.setState({ photo_id: id });
+            this.props.createComment(this.state);
+            this.props.deleteErrors();
+            this.setState({body:"", photo_id: this.props.photoId});
+            
+        }else{
+            this.props.history.push('/login');
+        }
     }
 
     componentWillUnmount() {
@@ -38,8 +47,7 @@ class CommentForm extends React.Component{
 
     renderErrors() {
         const errors = this.props.errors;
-        console.log(errors);
-        if (this.props.errors) {
+        if (errors && errors.length > 0 ) {
             return (
                 <ul className="error-messagesss">
                     {this.props.errors.map((error, i) => {

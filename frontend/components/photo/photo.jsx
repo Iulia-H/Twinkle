@@ -22,17 +22,12 @@ class Photo extends React.Component{
             <div className="elements">
                 <div className="comments">
                     <CommentsContainer comments={comments} user={user}/>
-                    {currentUser ?
-                            <CommentFormContainer photoId={photo.id} className="comment-form" />
-                        : null
-                    }
+                    <CommentFormContainer photoId={photo.id}  history={this.props.history} className="comment-form" />
                 </div>
                 <div className="tag-container">
                     <TagsContainer tags={tags} />
-                    {(this.props.photo && currentUser &&(user.id === this.props.photo.user_id))?
-                        <div>
+                    {(this.props.photo && currentUser &&(currentUser.id === this.props.photo.user_id))?
                             <TagFormContainer photoId={photo.id} className="tag-form" />
-                        </div>
                         : ""
                     }
                 </div>

@@ -13,7 +13,7 @@
     height: 91%;
     min-height: 91%;
     width: 100%;
-    background-color:black;
+    background-color:rgb(48, 44, 44);
     top: 9%;
     bottom: 20%;
     border-style: solid;
@@ -42,6 +42,8 @@
     width: 100px;
     height: 100px;
     background-color: aliceblue;
+    padding: 5px;
+    margin: 10px;
 }
 
 input:first-child{
@@ -52,15 +54,23 @@ input:first-child{
 
 
 .upload{
-    background-color: white;
+    background-color: rgb(247, 243, 243);
+    border-radius: 2px;
     color:black;
-    padding: 7px;
-    padding-top: 12px;
+    padding: 9px;
+    /* padding-top: 12px; */
+
     width: 80px;
-    height: 25px;
+    height: 15px;
     text-align: center;
-    font-size: medium;
+    font-size: small;
     
+}
+.error-message{
+    background-color: rgb(240, 211, 216);
+    color: rgb(78, 75, 75);
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .upload:hover{
@@ -68,9 +78,11 @@ input:first-child{
 }
 
 .upload input{
-
     opacity: 0;
+}
 
+.upload-form input{
+    border-radius: 8px;
 }
 
 .upload-form button{

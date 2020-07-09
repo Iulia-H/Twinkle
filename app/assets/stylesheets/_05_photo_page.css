@@ -46,9 +46,7 @@
     grid-template-rows: 550px ;
     grid-template-columns: 550px 550px ;
     grid-gap: 50px;
-    justify-content: center;
-  
-    
+    justify-content: center;  
 }
 .comment{
     display: flex;
@@ -72,10 +70,11 @@
     line-height: 1.6;
 }
 
+
 .tags{
     display: flex;
     flex-wrap: wrap;
-    
+    align-self: flex-end;
 }
 
 .tag{
@@ -129,12 +128,11 @@
     padding: 15px;
     border-color: black;
     border-style: solid;
-    border-width: thin;
+    border-radius: 5px;
     width: 80%;
     height: 50%;
     font-size: large;
     margin-bottom: 15px;
-    border-radius: 3px;
 }
 .error-container{
     width: 80%;
