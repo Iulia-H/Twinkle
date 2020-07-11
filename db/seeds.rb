@@ -59,19 +59,31 @@ photo5 = Photo.create(title: "Photo by Jeremy Thomas on Unsplash", user_id: user
 photo5.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/qoWV2CCwA2iDoSQ2YhxxSfAz"), filename: 'jeremy-thomas-E0AHdsENmDg-unsplash.jpg')
 
 space = Tag.create(body: "space", photo_id: photo5.id )
-nature = Tag.create(body: "nature", photo_id: photo5.id )
-mountain = Tag.create(body: "mountain", photo_id: photo5.id )
+stars = Tag.create(body: "stars", photo_id: photo5.id )
+galaxy = Tag.create(body: "galaxy", photo_id: photo5.id )
 
 
 photo6 = Photo.create(title: "Photo by NASA on Unsplash", user_id: user3.id)
 photo6.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/rFvsMNzzrCSNd9EzwtB5eJ8E"), filename: 'nasa-Q1p7bh3SHj8-unsplash.jpg')
 
+space = Tag.create(body: "space", photo_id: photo6.id )
+night = Tag.create(body: "night", photo_id: photo6.id )
+earth = Tag.create(body: "earth", photo_id: photo6.id )
+
 photo7 = Photo.create(title: "Photo by NASA on Unsplash", user_id: user4.id)
 photo7.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/VBSjsQn3UuaLJKRWY2RmytbH"), filename: 'nasa-rTZW4f02zY8-unsplash.jpg')
+
+space = Tag.create(body: "space", photo_id: photo7.id )
+galaxy = Tag.create(body: "galaxy", photo_id: photo7.id )
+stars = Tag.create(body: "stars", photo_id: photo7.id )
 
 photo8 = Photo.create(title: "Photo by Juskteez Vu on Unsplash", user_id: user4.id)
 photo8.link.attach(io: open("https://twinkle-dev.s3-us-west-1.amazonaws.com/eJHyav3sFJCFPcucaw7b61dm"), filename: 'juskteez-vu-mwhklqGVzck-unsplash.jpg')
 
+space = Tag.create(body: "space", photo_id: photo8.id )
+galaxy = Tag.create(body: "galaxy", photo_id: photo8.id )
+stars = Tag.create(body: "stars", photo_id: photo8.id )
+earth = Tag.create(body: "earth", photo_id: photo8.id )
 # photo9 = Photo.create(title: "Photo by Ricardo Gomez Angel on Unsplash", user_id: user5.id)
 # photo9.link.attach(io: open("), filename: 'ricardo-gomez-angel--98jVaVuGv0-unsplash.jpg')
 
