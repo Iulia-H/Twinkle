@@ -43,7 +43,6 @@ class Photo extends React.Component{
         const photo = this.props.photo;
         const comments = this.props.getComments(photo.id);
         const tags = this.props.getTags(photo.id);
-        console.log(photo.id);
         return ( 
             <div className="page-container" >
                 <div className="photo-container">
