@@ -17,7 +17,6 @@ class Photo extends React.Component{
         const tags = this.props.getTags(photo.id);
         const currentUser = Object.values(this.props.user)[0];
         const user = this.props.photo.user;
-        console.log(currentUser);
         return (
             <div className="elements">
                 <div className="comments">

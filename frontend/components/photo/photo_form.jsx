@@ -47,7 +47,6 @@ class PhotoForm extends React.Component{
             url: null
         });
         if (this.props.photos.id) {
-            console.log(this.props.photos);
             this.props.history.push(`/photos/${this.props.photos.id}`)
         } 
      
@@ -86,15 +85,14 @@ class PhotoForm extends React.Component{
         if (this.props.errors) {
             this.props.deleteErrors();    
         }
-        console.log("deleted stuff")
     }
 
 
     render(){
         const preview = this.state.url? <img src={this.state.url}/> : null;
-        if (this.props.photos.id) {
-            console.log(this.props.photos);
-        } 
+        // if (this.props.photos.id) {
+
+        // } 
        
         return(
             <div className="upload-box">

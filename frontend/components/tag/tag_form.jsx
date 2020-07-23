@@ -49,7 +49,6 @@ class TagForm extends React.Component{
 
 
     render(){
-        console.log(this.props.errors)
         return(
             <div>
                 <form onSubmit={this.handleSubmit} className="tag-form">

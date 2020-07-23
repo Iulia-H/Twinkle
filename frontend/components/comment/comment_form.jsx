@@ -12,8 +12,6 @@ class CommentForm extends React.Component{
             };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log(this.props.photoId);
-        // this.renderErrors = this.renderErrors.bind(this);
         
     }
     
@@ -27,7 +25,6 @@ class CommentForm extends React.Component{
         e.preventDefault();
         const user = Object.values(this.props.currentUser);
         if (user.id){
-            console.log(this.props.currentUser)
             const id = this.props.photoId;
             this.setState({ photo_id: id });
             this.props.createComment(this.state);
