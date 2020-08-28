@@ -23,8 +23,9 @@ class CommentForm extends React.Component{
 
     handleSubmit(e){
         e.preventDefault();
-        const user = Object.values(this.props.currentUser);
+        const user = this.props.currentUser;
         if (user.id){
+            // console.log(user);
             const id = this.props.photoId;
             this.setState({ photo_id: id });
             this.props.createComment(this.state);
@@ -33,6 +34,7 @@ class CommentForm extends React.Component{
             
         }else{
             this.props.history.push('/login');
+            // console.log("redirect");
         }
     }
 

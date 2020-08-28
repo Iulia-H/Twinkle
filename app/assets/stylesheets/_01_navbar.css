@@ -14,7 +14,7 @@
 }
 
 .title{
-    font-family: sans-serif;
+    font-family: serif;
     font-size: xx-large;
     color: white;
     opacity: 1;
@@ -25,7 +25,7 @@
 }
 
 .photos-page{
-    font-family: sans-serif;
+    font-family: serif;
     font-size: large;
     color: white;
     opacity: 1;
@@ -56,7 +56,7 @@
 }
 
 .welcome-message{
-    font-family: sans-serif;
+    font-family: serif;
     font-size: medium;
     color: white;
     padding:5px 0

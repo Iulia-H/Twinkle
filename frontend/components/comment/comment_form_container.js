@@ -3,10 +3,10 @@ import CommentForm from "./comment_form";
 import { createComment, deleteErrors } from "../../actions/comments_actions";
 
 
-const mSTP = ({entities, errors}) => ({
+const mSTP = ({entities, errors, session}) => ({
     photo: entities.photos,
     errors: errors.comment.errors,
-    currentUser: entities.users
+    currentUser: session
 });
 
 const mDTP = dispatch => ({
