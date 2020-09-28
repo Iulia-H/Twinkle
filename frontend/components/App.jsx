@@ -13,7 +13,7 @@ import PhotosContainer from "./photo/photos";
 
 function initializeReactGA() {
     ReactGA.initialize('UA-179152947-1');
-    ReactGA.pageview('/homepage');
+    ReactGA.pageview('/');
 }
 
 
