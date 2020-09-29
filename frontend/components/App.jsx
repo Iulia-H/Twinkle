@@ -37,6 +37,8 @@ const App = () => (
        
         </div>
     </div>
+    
 );
+initializeReactGA();
 
 export default App;
