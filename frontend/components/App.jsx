@@ -50,6 +50,6 @@ const App = () => (
     
 );
 
-initializeReactGA();
+// initializeReactGA();
 
 export default App;
