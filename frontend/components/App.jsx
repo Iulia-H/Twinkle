@@ -11,10 +11,20 @@ import PhotoFormContainer from "./photo/photo_form";
 import TagFormContainer from "./tag/tag_form_container";
 import PhotosContainer from "./photo/photos";
 
-function initializeReactGA() {
-    ReactGA.initialize('UA-179152947-1');
-    ReactGA.pageview('/');
-}
+
+// function initializeReactGA() {
+//     ReactGA.initialize('UA-179152947-1');
+//     history.listen((location) => {
+//         if (window.ga) {
+//             window.ga('send', 'pageview', location.pathname);
+//         }
+//     });
+//     ReactGA.pageview('/');
+// }
+
+
+ReactGA.initialize('UA-179152947-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 const App = () => (
@@ -39,6 +49,7 @@ const App = () => (
     </div>
     
 );
+
 initializeReactGA();
 
 export default App;
