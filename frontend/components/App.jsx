@@ -12,16 +12,16 @@ import TagFormContainer from "./tag/tag_form_container";
 import PhotosContainer from "./photo/photos";
 
 
-function initializeReactGA() {
-    ReactGA.initialize('UA-179152947-1');
-    // history.listen((location) => {
-    //     if (window.ga) {
-    //         window.ga('send', 'pageview', location.pathname);
-    //     }
-    // });
-    ReactGA.pageview(`${window.location.pathname + window.location.search}`);
-    console.log(`${window.location.pathname + window.location.search}`);
-}
+// function initializeReactGA() {
+//     ReactGA.initialize('UA-179152947-1');
+//     // history.listen((location) => {
+//     //     if (window.ga) {
+//     //         window.ga('send', 'pageview', location.pathname);
+//     //     }
+//     // });
+//     ReactGA.pageview(`${window.location.pathname + window.location.search}`);
+//     console.log(`${window.location.pathname + window.location.search}`);
+// }
 
 
 // ReactGA.initialize('UA-179152947-1');
@@ -52,6 +52,6 @@ const App = () => (
     
 );
 
-initializeReactGA();
+// initializeReactGA();
 
 export default App;
