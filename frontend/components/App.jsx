@@ -14,22 +14,11 @@ import PhotosContainer from "./photo/photos";
 
 // function initializeReactGA() {
 //     ReactGA.initialize('UA-179152947-1');
-//     // history.listen((location) => {
-//     //     if (window.ga) {
-//     //         window.ga('send', 'pageview', location.pathname);
-//     //     }
-//     // });
-//     ReactGA.pageview(`${window.location.pathname + window.location.search}`);
-//     console.log(`${window.location.pathname + window.location.search}`);
+//     ReactGA.pageview(`${window.location.href}`);
 // }
 
-
-// ReactGA.initialize('UA-179152947-1');
-// ReactGA.pageview(window.location.pathname + window.location.search);
-// console.log(window.location.pathname);
-
-
 const App = () => (
+    // initializeReactGA(),
     <div>
         <header className="links">
         <NavBarContainer />
